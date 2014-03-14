@@ -31,6 +31,5 @@ request({
 		
 	// Convert to json
 	output = JSON.stringify(output, null, 4);
-	// console.log(output);
-	console.log("Hi");
+	console.log(output);
 }); 

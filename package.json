@@ -4,6 +4,8 @@
   "description": "whatsonkerb ===========",
   "main": "api.js",
   "dependencies": {
+  	"node": "0.6.x",
+    "npm": "1.1.x", 
     "request": "~2.34.0",
     "cheerio": "~0.13.1"
   },
