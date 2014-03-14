@@ -3,6 +3,9 @@ var cheerio = require('cheerio');
 
 var url = "http://www.kerbfood.com/kings-cross/";
 
+console.log(request);
+console.log(cheerio);
+
 request({
 	"uri": url
 	}, function(err, resp, body){
