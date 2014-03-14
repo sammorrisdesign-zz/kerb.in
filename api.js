@@ -1,5 +1,9 @@
 var request = require('request');
 var cheerio = require('cheerio');
+var express = require('express');
+var app = express();
+
+app.use(express.logger());
 
 var url = "http://www.kerbfood.com/kings-cross/";
 
@@ -36,3 +40,12 @@ request({
 	output = JSON.stringify(output, null, 4);
 	console.log(output);
 }); 
+
+app.get('/', function(request, response) {
+  response.send('Hello World!');
+});
+
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
