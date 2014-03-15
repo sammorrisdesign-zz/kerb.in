@@ -10,7 +10,9 @@ var url = "http://www.kerbfood.com/kings-cross/";
 console.log(request);
 console.log(cheerio);
 
-request({
+app.get('/', function(request, response) {
+
+	request({
 	"uri": url
 	}, function(err, resp, body){
 		var $ = cheerio.load(body);
@@ -38,11 +40,9 @@ request({
 		
 	// Convert to json
 	output = JSON.stringify(output, null, 4);
-	console.log(output);
-}); 
+	response.send(output);
+	});
 
-app.get('/', function(request, response) {
-  response.send('Hello World!');
 });
 
 var port = process.env.PORT || 5000;
