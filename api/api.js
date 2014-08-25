@@ -19,6 +19,7 @@ request({
 
     // Create Structure for data
     var output = {};
+    output["lastUpdated"] = Date();
 
     // Target panel on Kerb website
     $(".rota_panel > ul > li").each(function(index) {
