@@ -1,0 +1,170 @@
+{
+    "0": {
+        "date": "Tuesday 26th August 2014",
+        "stand-0": {
+            "standName": "BBQ Lab",
+            "href": "/traders/bbq-lab/",
+            "image": "/uploads/traders/square/bbqlab4.jpeg",
+            "description": "Taking BBQ to the next level in a sous-vide ambulance"
+        },
+        "stand-1": {
+            "standName": "Capish?",
+            "href": "/traders/capish/",
+            "image": "/uploads/traders/square/capish.jpg",
+            "description": "The best Italo-American sandwiches going, understood?"
+        },
+        "stand-2": {
+            "standName": "Falafel Al-Hooriya",
+            "href": "/traders/falafel-al-hooriya/",
+            "image": "/uploads/traders/square/mahmoud%20and%20victoria%20stall.jpg",
+            "description": "Falafel with a story to tell"
+        },
+        "stand-3": {
+            "standName": "Noble Espresso",
+            "href": "/traders/noble-espresso/",
+            "image": "/uploads/traders/square/DSCF0080.jpg",
+            "description": "Aeropress champ grinding up a storm on the kerb"
+        },
+        "stand-4": {
+            "standName": "Oli Baba's",
+            "href": "/traders/oli-baba-s/",
+            "image": "/uploads/traders/square/10012623_329585923859032_4240377371019929323_n.jpg",
+            "description": "The hummus elevator - heading straight back to the source"
+        },
+        "stand-5": {
+            "standName": "Vinn Goute - Seychelles Kitchen",
+            "href": "/traders/vinn-goute/",
+            "image": "/uploads/traders/square/kerbsat-60.jpg",
+            "description": "The creole kitchen full of bustle, muscle and SPICE!"
+        }
+    },
+    "1": {
+        "date": "Wednesday 27th August 2014",
+        "stand-0": {
+            "standName": "Born & Raised",
+            "href": "/traders/born-raised/",
+            "image": "/uploads/traders/square/BornandRaised_QuickEdit_02.jpg",
+            "description": "Wood-fired pizza out the side of a Land Rover - what could be better?"
+        },
+        "stand-1": {
+            "standName": "Cast Iron Kitchen",
+            "href": "/traders/cast-iron-kitchen/",
+            "image": "/uploads/traders/square/_MG_9937.jpg",
+            "description": "Scotch sarnies and black puddin' rolls"
+        },
+        "stand-2": {
+            "standName": "Club Mexicana",
+            "href": "/traders/club-mexicana/",
+            "image": "/uploads/traders/square/BmnqoUnIQAAVope.jpg",
+            "description": "Pulled jackfruit tacos"
+        },
+        "stand-3": {
+            "standName": "Crabbieshack",
+            "href": "/traders/crabbieshack/",
+            "image": "/uploads/traders/square/DSC_8640.jpg",
+            "description": "Folkestone lad brings them from the seashore"
+        },
+        "stand-4": {
+            "standName": "Hanoi Kitchen",
+            "href": "/traders/hanoi-kitchen/",
+            "image": "/uploads/traders/square/GaztronomeDSC_8061.jpg",
+            "description": "Salads and summer rolls transporting you to the streets of Hanoi"
+        },
+        "stand-5": {
+            "standName": "Noble Espresso",
+            "href": "/traders/noble-espresso/",
+            "image": "/uploads/traders/square/DSCF0080.jpg",
+            "description": "Aeropress champ grinding up a storm on the kerb"
+        }
+    },
+    "2": {
+        "date": "Thursday 28th August 2014",
+        "stand-0": {
+            "standName": "Baba G's",
+            "href": "/traders/baba-g-s/",
+            "image": "/uploads/traders/square/kerbisone_web-52.jpg",
+            "description": "The spiced meat maverick with a tandoor in his trunk"
+        },
+        "stand-1": {
+            "standName": "Bill or Beak",
+            "href": "/traders/bill-or-beak/",
+            "image": "/uploads/traders/square/beakyeee.png",
+            "description": "Duck a l'ordinary this certainly isn't"
+        },
+        "stand-2": {
+            "standName": "Falafel Al-Hooriya",
+            "href": "/traders/falafel-al-hooriya/",
+            "image": "/uploads/traders/square/mahmoud%20and%20victoria%20stall.jpg",
+            "description": "Falafel with a story to tell"
+        },
+        "stand-3": {
+            "standName": "Kothu Kothu",
+            "href": "/traders/kothu-kothu/",
+            "image": "/uploads/traders/square/Kothu.jpg",
+            "description": "Chop chop! This spice box is ready for its close-up"
+        },
+        "stand-4": {
+            "standName": "Miss P's Barbecue",
+            "href": "/traders/miss-p-s-barbecue/",
+            "image": "/uploads/traders/square/gaz%20group%20shot.jpg",
+            "description": "London via Jamaica via Atlanta - this is one world class international meat geek"
+        },
+        "stand-5": {
+            "standName": "Noble Espresso",
+            "href": "/traders/noble-espresso/",
+            "image": "/uploads/traders/square/DSCF0080.jpg",
+            "description": "Aeropress champ grinding up a storm on the kerb"
+        },
+        "stand-6": {
+            "standName": "Yum Bun",
+            "href": "/traders/yum-bun/",
+            "image": "/uploads/traders/square/YumBunBus.JPG",
+            "description": "The original bun girl - don't mess."
+        }
+    },
+    "3": {
+        "date": "Friday 29th August 2014",
+        "stand-0": {
+            "standName": "7 Bridges Deli",
+            "href": "/traders/7-bridges-deli/",
+            "image": "/uploads/traders/square/IMG_0122.jpg",
+            "description": "A proper New York deli, in London, on the street."
+        },
+        "stand-1": {
+            "standName": "Beef & Liberty",
+            "href": "/traders/beef-liberty/",
+            "image": "/uploads/traders/square/Tottneham_02.jpg",
+            "description": "Democratising the steak club"
+        },
+        "stand-2": {
+            "standName": "Crabbieshack",
+            "href": "/traders/crabbieshack/",
+            "image": "/uploads/traders/square/DSC_8640.jpg",
+            "description": "Folkestone lad brings them from the seashore"
+        },
+        "stand-3": {
+            "standName": "Mother Flipper",
+            "href": "/traders/mother-flipper/",
+            "image": "/uploads/traders/square/MF2.jpg",
+            "description": "No patty left unturned to execute one of the best burger offerings around"
+        },
+        "stand-4": {
+            "standName": "Noble Espresso",
+            "href": "/traders/noble-espresso/",
+            "image": "/uploads/traders/square/DSCF0080.jpg",
+            "description": "Aeropress champ grinding up a storm on the kerb"
+        },
+        "stand-5": {
+            "standName": "Oli Baba's",
+            "href": "/traders/oli-baba-s/",
+            "image": "/uploads/traders/square/10012623_329585923859032_4240377371019929323_n.jpg",
+            "description": "The hummus elevator - heading straight back to the source"
+        },
+        "stand-6": {
+            "standName": "Suzette",
+            "href": "/traders/suzette/",
+            "image": "/uploads/traders/square/IMG_4073.JPG",
+            "description": "Pas simplement Jambon - Fromage"
+        }
+    }
+}
