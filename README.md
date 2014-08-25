@@ -15,4 +15,4 @@ To get Grunt, run: `npm install -g grunt-cli`
 
 You'll then need to run `npm install` from both the root folder and the `/api` folder to get the various dependances.
 
-From then on use `grunt watch`, or `grunt default` to compile all then watch, from the root to automate all tasks during development.
+From then on use `grunt watch`, or `grunt` to compile all then watch, from the root to automate all tasks during development.
