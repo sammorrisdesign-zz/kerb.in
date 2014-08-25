@@ -3,14 +3,12 @@ var cheerio = require('cheerio');
 var express = require('express');
 var app = express();
 
-app.use(express.logger());
-
 var url = "http://www.kerbfood.com/kings-cross/";
 
 console.log(request);
 console.log(cheerio);
 
-app.get('/', function(request, response) {
+app.get('/', function(requestvar, response) {
 
 	request({
 	"uri": url
