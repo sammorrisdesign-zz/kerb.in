@@ -24,7 +24,8 @@ request({
 
             subIndex = "stand-" + subIndex;
             output[index][subIndex] = {};
-            output[index][subIndex]["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "");
+            output[index][subIndex]["handle"] = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", "");
+            output[index][subIndex]["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "").replace(" - Seychelles Kitchen", "");
             output[index][subIndex]["href"] = $(this).find("h4 a").attr("href");
             output[index][subIndex]["image"] = $(this).find("a > img").attr("src");
             output[index][subIndex]["description"] = $(this).find("p").text();
