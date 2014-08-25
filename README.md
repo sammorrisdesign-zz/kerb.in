@@ -4,6 +4,7 @@ whatsonkerb
 A service that tells you what's on Kerb KX
 
 ## Requirements
+* Ruby 1.9.2
 * [Node](nodejs.org) with the latest version of Node Package Manager
 
 ## Usage
