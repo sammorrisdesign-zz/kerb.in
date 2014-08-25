@@ -54,6 +54,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-execute');
 
   // Default task.
-  grunt.registerTask('default', ['watch']);
-
+  grunt.registerTask('default', ['execute', 'sass', 'scsslint', 'watch']);
 };
