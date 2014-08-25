@@ -15,6 +15,29 @@ module.exports = function(grunt) {
       scripts: {
         files: './api/api.js',
         tasks: ['execute']
+      },
+      scsslint: {
+        files: 'template/**/*.scss',
+        tasks: ['scsslint']
+      },
+      css: {
+        files: 'template/**/*.scss',
+        tasks: ['sass']
+      }
+    },
+    sass: {
+      dist: {
+        files: {
+            'style.css' : 'template/scss/style.scss'
+        }
+      }
+    },
+    scsslint: {
+      allFiles: [
+        'template/**/*.scss'
+      ],
+      options: {
+        config: 'template/scss/.scss-lint.yml'
       }
     },
     execute: {
@@ -26,9 +49,11 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-scss-lint');
   grunt.loadNpmTasks('grunt-execute');
 
   // Default task.
-  grunt.registerTask('default', ['execute']);
+  grunt.registerTask('default', ['watch']);
 
 };

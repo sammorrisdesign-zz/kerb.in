@@ -1,3 +1,6 @@
 .DS_Store
 api.json
 index.html
+.sass-cache
+.sass-cache/
+style.css
