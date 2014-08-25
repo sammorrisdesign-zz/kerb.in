@@ -1,6 +1,7 @@
 var request = require('request');
 var cheerio = require('cheerio');
 var express = require('express');
+var fs = require("fs");
 var app = express();
 
 var url = "http://www.kerbfood.com/kings-cross/";
@@ -26,7 +27,7 @@ app.get('/', function(requestvar, response) {
 
                 subIndex = "stand-" + subIndex;
                 output[index][subIndex] = {};
-                output[index][subIndex]["standName"] = $(this).find("h4 a").text();
+                output[index][subIndex]["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "");
                 output[index][subIndex]["href"] = $(this).find("h4 a").attr("href");
                 output[index][subIndex]["image"] = $(this).find("a > img").attr("src");
                 output[index][subIndex]["description"] = $(this).find("p").text();
@@ -34,9 +35,18 @@ app.get('/', function(requestvar, response) {
             });
         });
 
-    // Convert to json
-    output = JSON.stringify(output, null, 4);
-    response.send(output);
+        // Convert to json
+        output = JSON.stringify(output, null, 4);
+        response.send(output);
+        
+        // Output file
+        fs.writeFile("api.json", output, function(err) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("File Written");
+            }
+        });
     });
 });
 
