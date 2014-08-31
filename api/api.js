@@ -10,19 +10,21 @@ require.extensions['.html'] = function (module, filename) {
 };
 var html = require("../template/template.html");
 var descriptions = require("./descriptions.json");
-var url = "http://www.kerbfood.com/kingscross";
+var source = "http://www.kerbfood.com/gherkin/";
 
 // Options
 var jsonExport = true;
+var url = "www.kerb.in";
 
 request({
-"uri": url
+"uri": source
 }, function(err, resp, body){
     var $ = cheerio.load(body);
 
     // Create Structure for data
     var output = {};
     output["lastUpdated"] = Date();
+    output["url"] = url;
 
     // Target panel on Kerb website
     $(".rota_panel > ul > li").each(function(index) {
