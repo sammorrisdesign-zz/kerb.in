@@ -11,7 +11,7 @@ linters:
     width: 4
 
   PropertySortOrder:
-    order: ['position', 'z-index', 'top', 'right', 'bottom', 'left', 'display', 'overflow', 'box-sizing', 'width', 'max-width', 'height', 'max-height', 'padding', 'border', 'margin', 'margin-left', 'background', 'background-image', 'background-repeat', 'background-size', 'background-position', 'color', 'font-family', 'font-size', 'line-height', 'text-align', 'cursor']
+    order: concentric
 
   SelectorDepth:
     enabled: true

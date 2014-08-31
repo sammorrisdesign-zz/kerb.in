@@ -1,0 +1,43 @@
+.menu {
+    .menu__date {
+        color: $grey;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .menu__list {
+        margin: 20px 0;
+        border: 6px solid $light-red;
+        padding: 0 20px;
+
+        .menu__list__trader {
+            text-transform: uppercase;
+            margin: 20px 0;
+
+            .menu__list__trader__name {
+                font-size: 2.6rem;
+                font-weight: 700;
+            }
+
+            .menu__list__trader__description {
+                font-size: 1.6rem;
+                color: $off-blue;
+            }
+        }
+    }
+
+    .menu__tomorrow-list {
+        padding: 20px 0 6px;
+        font-size: 1.6rem;
+        display: none;
+
+        .menu__tomorrow-list__date {
+            color: $grey;
+            margin: 0 0 6px 1px;
+        }
+        
+        .menu__tomorrow-list__traders {
+            color: $off-blue;
+        }
+    }
+}

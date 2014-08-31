@@ -16,27 +16,29 @@
 </head>
 <body>
     <main class="container">
-        <h1>Kerb In King's Cross</h1>
-        <ul class="market-list">
+        <h1 class="title">Kerb In King's Cross</h1>
+        <div class="menu">
             {{#date-0}}
-            {{date}}
+            <h3 class="menu__date">for {{date}}</h3>
+            <ul class="menu__list">
             {{#traders}}
-                <li class="market-list__trader">
-                    <h2 class="market-list__trader__name">{{standName}}</h2>
-                    <span class="market-list__trader__description">{{description}}</span>
+                <li class="menu__list__trader">
+                    <h2 class="menu__list__trader__name">{{standName}}</h2>
+                    <span class="menu__list__trader__description">{{description}}</span>
                 </li>
             {{/traders}}
+            </ul>
             {{/date-0}}
-        </ul>
-        <div class="tomorrow-list">
-            {{#date-1}}
-            <h3 class="tomorrow-list__title">{{date}}</h3>
-            <p class="tomorrow-list__traders">
-            {{#traders}}
-                {{standName}}{{^last}}, {{/last}}
-            {{/traders}}
-            </p>
-            {{/date-1}}
+            <div class="menu__tomorrow-list">
+                {{#date-1}}
+                <h3 class="menu__tomorrow-list__date">{{date}}</h3>
+                <p class="menu__tomorrow-list__traders">
+                {{#traders}}
+                    {{standName}}{{^last}}, {{/last}}
+                {{/traders}}
+                </p>
+                {{/date-1}}
+            </div>
         </div>
     </main>
 
