@@ -10,7 +10,7 @@ require.extensions['.html'] = function (module, filename) {
 };
 var html = require("../template/template.html");
 var descriptions = require("./descriptions.json");
-var url = "http://www.kerbfood.com/kings-cross/";
+var url = "http://www.kerbfood.com/kingscross";
 
 // console.log(request);
 // console.log(cheerio);

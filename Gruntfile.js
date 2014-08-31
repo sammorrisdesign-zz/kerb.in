@@ -12,10 +12,6 @@ module.exports = function(grunt) {
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     watch: {
-      scripts: {
-        files: './api/api.js',
-        tasks: ['execute']
-      },
       scsslint: {
         files: 'template/**/*.scss',
         tasks: ['scsslint']
@@ -23,6 +19,10 @@ module.exports = function(grunt) {
       css: {
         files: 'template/**/*.scss',
         tasks: ['sass']
+      },
+      node: {
+        files: ['api/api.js', 'template/template.html'],
+        tasks: ['shell']
       }
     },
     sass: {
@@ -40,9 +40,9 @@ module.exports = function(grunt) {
         config: 'template/scss/.scss-lint.yml'
       }
     },
-    execute: {
-      api: {
-        src: ["api/api.js"]
+    shell: {
+      node: {
+        command: ['cd api', 'node api.js'].join('&&')
       }
     }
   });
@@ -51,8 +51,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-scss-lint');
-  grunt.loadNpmTasks('grunt-execute');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task.
-  grunt.registerTask('default', ['execute', 'sass', 'scsslint', 'watch']);
+  grunt.registerTask('default', ['shell', 'sass', 'scsslint', 'watch']);
 };
