@@ -1,14 +1,16 @@
 .menu {
+
     .menu__date {
-        color: $grey;
-        font-size: 1.6rem;
+        color: $off-blue;
+        font-size: 1.8rem;
         text-align: center;
     }
 
     .menu__list {
         margin: 20px 0;
-        border: 6px solid $light-red;
+        border: 6px solid $yellow;
         padding: 0 20px;
+        background-color: $white;
 
         .menu__list__trader {
             text-transform: uppercase;
@@ -17,6 +19,7 @@
             .menu__list__trader__name {
                 font-size: 2.6rem;
                 font-weight: 700;
+                color: $light-red;
             }
 
             .menu__list__trader__description {
