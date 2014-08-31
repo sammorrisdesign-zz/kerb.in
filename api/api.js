@@ -14,7 +14,7 @@ var source = "http://www.kerbfood.com/gherkin/";
 
 // Options
 var jsonExport = true;
-var url = "www.kerb.in";
+var url = "http://www.kerb.in";
 
 request({
 "uri": source
