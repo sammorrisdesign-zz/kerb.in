@@ -15,9 +15,21 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-{{#date-0}}
-    <h1>{{standName}}</h1>
-{{/date-0}}
+    <main class="container">
+        <h1>Kerb In King's Cross</h1>
+        <ul class="market-list">
+            {{#date-0}}
+                <li class="market-list__trader">
+                    <h2 class="market-list__trader__name">{{standName}}</h2>
+                    <span class="market-list__trader__description">{{description}}</span>
+                </li>
+            {{/date-0}}
+        </ul>
+        <p class="market-list--tomorrow">
+            {{#date-1}}
+                {{standName}}{{^last}}, {{/last}}
+            {{/date-1}}
+    </main>
 
     <!-- GoSquared Analytics -->
     <script>
