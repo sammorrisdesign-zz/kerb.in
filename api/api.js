@@ -10,7 +10,7 @@ require.extensions['.html'] = function (module, filename) {
 };
 var html = require("../template/template.html");
 var descriptions = require("./descriptions.json");
-var source = "http://www.kerbfood.com/gherkin/";
+var source = "http://www.kerbfood.com/kings-cross/";
 
 // Options
 var jsonExport = true;
