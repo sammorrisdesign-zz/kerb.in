@@ -30,26 +30,26 @@ request({
     $(".rota_panel > ul > li").each(function(index) {
         index = "date-" + index;
         output[index] = {};
+        output[index]["traders"] = [];
         output[index]["date"] = $(this).attr("rel");
-        output[index] = [];
         var numOfTraders = $(this).find("ul li").length;
 
         $(this).find("ul li").each(function(subIndex) {
             var handle = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", "");
-            var seller = {};
-            seller["handle"] = handle;
-            seller["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "").replace(" - Seychelles Kitchen", "");
+            var trader = {};
+            trader["handle"] = handle;
+            trader["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "").replace(" - Seychelles Kitchen", "");
             if (descriptions[handle] != void(0)) {
-                seller["description"] = descriptions[handle];
+                trader["description"] = descriptions[handle];
             } else {
-                seller["description"] = $(this).find("p").text();
+                trader["description"] = $(this).find("p").text();
             }
-            seller["href"] = $(this).find("h4 a").attr("href");
-            seller["image"] = $(this).find("a > img").attr("src");
+            trader["href"] = $(this).find("h4 a").attr("href");
+            trader["image"] = $(this).find("a > img").attr("src");
             if (numOfTraders - 1 == subIndex) {
-                seller["last"] = true;
+                trader["last"] = true;
             }
-            output[index].push(seller);
+            output[index]["traders"].push(trader);
         });
     });
 

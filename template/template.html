@@ -19,16 +19,25 @@
         <h1>Kerb In King's Cross</h1>
         <ul class="market-list">
             {{#date-0}}
+            {{date}}
+            {{#traders}}
                 <li class="market-list__trader">
                     <h2 class="market-list__trader__name">{{standName}}</h2>
                     <span class="market-list__trader__description">{{description}}</span>
                 </li>
+            {{/traders}}
             {{/date-0}}
         </ul>
-        <p class="market-list--tomorrow">
+        <div class="tomorrow-list">
             {{#date-1}}
+            <h3 class="tomorrow-list__title">{{date}}</h3>
+            <p class="tomorrow-list__traders">
+            {{#traders}}
                 {{standName}}{{^last}}, {{/last}}
+            {{/traders}}
+            </p>
             {{/date-1}}
+        </div>
     </main>
 
     <!-- GoSquared Analytics -->
