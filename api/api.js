@@ -12,9 +12,8 @@ var html = require("../template/template.html");
 var descriptions = require("./descriptions.json");
 var url = "http://www.kerbfood.com/kingscross";
 
-// console.log(request);
-// console.log(cheerio);
-// console.log(descriptions);
+// Options
+var jsonExport = true;
 
 request({
 "uri": url
@@ -59,6 +58,16 @@ request({
             console.log("File Written");
         }
     });
+
+    if (jsonExport == true) {
+        fs.writeFile("api.json", JSON.stringify(output), function(err) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("Json Written");
+            }
+        });
+    }
 });
 
 var port = process.env.PORT || 5000;
