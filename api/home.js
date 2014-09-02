@@ -8,7 +8,7 @@ var fs = require("fs");
 require.extensions['.html'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
 };
-var html = require("../template/index.html");
+var html = require("../template/home.html");
 var markets = require("./markets.json");
 
 // Compile html using template.html
