@@ -6,12 +6,16 @@ var fs = require("fs");
 // External Sources
 var source = "http://www.kerbfood.com/kings-cross/";
 
+// Options
+var url = "http://www.kerb.in";
+
 request({
 "uri": source
 }, function(err, resp, body){
     var $ = cheerio.load(body);
     var output = {};
     output["markets"] = [];
+    output["url"] = url;
 
     // Target panel on Kerb website
     $("#nav_markets ul li").each(function(index) {
@@ -19,7 +23,7 @@ request({
         market["name"] = $(this).text();
         market["handle"] = $(this).find("a").attr("href").replace("/", "");
         market["uri"] = "http://www.kerbfood.com" + $(this).find("a").attr("href");
-        console.log(market);
+        market["localUrl"] = url + $(this).find("a").attr("href");
         output["markets"].push(market);
     });
 
