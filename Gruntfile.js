@@ -60,5 +60,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['shell:api', 'sass', 'scsslint', 'watch']);
   
   // Init task
-  grunt.registerTask('init', ['shell:api', 'shell:index', 'sass']);
+  grunt.registerTask('init', ['shell:index', 'shell:api', 'sass']);
 };
