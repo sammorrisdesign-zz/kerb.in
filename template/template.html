@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Kerb . In / King's Cross</title>
+    <title>Kerb . In / {{marketName}}</title>
     <meta name="description" content="Find out what's on Kerb near you">
-    <meta name="keywords" content="Kerb, King's Cross, Street Food, Market, Food Market, Burritos">
+    <meta name="keywords" content="Kerb, {{marketName}}, Street Food, Market, Food Market, Burritos">
     <link rel="canonical" href="{{url}}">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
 
     <!-- Fonts -->
     <script type="text/javascript" src="//use.typekit.net/hpa3kru.js"></script>
@@ -16,7 +16,7 @@
 </head>
 <body>
     <main class="container">
-        <h1 class="title">Kerb In King's Cross</h1>
+        <h1 class="title">Kerb In {{marketName}}</h1>
         <div class="menu">
             {{#date-0}}
             <h3 class="menu__date">for {{date}}</h3>
@@ -43,7 +43,7 @@
     </main>
 
     <footer>
-        Kerb.in is a project by <a target="_blank" href="http://www.sammorr.is">Sam Morris</a>. Say thanks <a target="_blank" href="http://www.twitter.com/sammorrisdesign">@SamMorrisDesign</a>
+        <a href="{{url}}">Kerb.in</a> is a project by <a target="_blank" href="http://www.sammorr.is">Sam Morris</a>. Say thanks <a target="_blank" href="http://www.twitter.com/sammorrisdesign">@SamMorrisDesign</a>
     </footer>
 
     <!-- GoSquared Analytics -->
