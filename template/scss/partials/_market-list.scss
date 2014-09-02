@@ -1,0 +1,21 @@
+.market-list {
+    margin: 30px 0 50px;
+
+    .market-list__title {
+        color: $off-blue;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .market-list__item {
+        font-size: 3.6rem;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 12px 0;
+
+        a {
+            color: $yellow;
+        }
+    }
+}
