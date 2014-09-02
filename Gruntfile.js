@@ -21,8 +21,8 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       node: {
-        files: ['api/api.js', 'template/template.html'],
-        tasks: ['shell']
+        files: ['api/api.js', 'template/market.html'],
+        tasks: ['shell:api']
       }
     },
     sass: {
@@ -41,8 +41,11 @@ module.exports = function(grunt) {
       }
     },
     shell: {
-      node: {
+      api: {
         command: ['cd api', 'node api.js'].join('&&')
+      },
+      index: {
+        command: ['cd api', 'node markets.js', 'node home.js'].join('&&')
       }
     }
   });
@@ -54,5 +57,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
 
   // Default task.
-  grunt.registerTask('default', ['shell', 'sass', 'scsslint', 'watch']);
+  grunt.registerTask('default', ['shell:api', 'sass', 'scsslint', 'watch']);
+  
+  // Init task
+  grunt.registerTask('init', ['shell:api', 'shell:index', 'sass']);
 };
