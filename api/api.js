@@ -4,6 +4,9 @@ var cheerio = require('cheerio');
 var handlebars = require("handlebars");
 var fs = require("fs");
 
+// Helpers
+var getHandlebarsPartials = require("./helpers/getHandlebarsPartials");
+
 // External Sources
 require.extensions['.html'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
@@ -71,6 +74,7 @@ sources["markets"].forEach(function(source) {
             console.log("No data for " + source["handle"] + ", nothing written");
         } else {
             // Compile html using template.html
+            
             var template = handlebars.compile(html);
             var result = template(output);
 
