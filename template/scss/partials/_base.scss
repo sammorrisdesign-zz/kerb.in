@@ -5,21 +5,20 @@
 }
 
 html {
-    font-family: $sans-serif;
-    font-size: 62.5%;
-    // -webkit-font-smoothing: antialiased;
     background-color: $teal;
     color: $light-red;
+    font-family: $sans-serif;
+    font-size: 62.5%;
 }
 
 .container {
-    max-width: 400px;
     margin: 0 auto;
+    max-width: 400px;
 }
 
 a {
-    color: $yellow;
     text-decoration: none;
+    color: $yellow;
 
     &:hover {
         text-decoration: underline;
@@ -27,10 +26,10 @@ a {
 }
 
 .title {
-    text-align: center;
-    color: $white;
     margin: 20px 0 12px;
-    font-size: 5.6rem;
+    text-align: center;
     text-transform: uppercase;
+    color: $white;
+    font-size: 5.6rem;
     font-weight: 700;
 }
