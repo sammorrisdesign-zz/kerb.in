@@ -8,5 +8,11 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-scss-lint": "^0.3.3",
     "grunt-shell": "^1.0.1"
+  },
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "fs": "0.0.2",
+    "handlebars": "^2.0.0",
+    "request": "^2.44.0"
   }
 }
