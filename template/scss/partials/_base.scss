@@ -17,6 +17,15 @@ html {
     margin: 0 auto;
 }
 
+a {
+    color: $yellow;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .title {
     text-align: center;
     color: $white;
