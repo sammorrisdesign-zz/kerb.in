@@ -19,15 +19,20 @@
         <h1 class="title"><a href="{{url}}">Kerb In</a> {{marketName}}</h1>
         <div class="menu">
             {{#date-0}}
-            <h3 class="menu__date">for {{date}}</h3>
-            <ul class="menu__list">
-            {{#traders}}
-                <li class="menu__list__trader">
-                    <h2 class="menu__list__trader__name">{{standName}}</h2>
-                    <span class="menu__list__trader__description">{{description}}</span>
-                </li>
-            {{/traders}}
-            </ul>
+                {{#isToday}}
+                <h3 class="menu__date">for {{date}}</h3>
+                <ul class="menu__list">
+                {{#traders}}
+                    <li class="menu__list__trader">
+                        <h2 class="menu__list__trader__name">{{standName}}</h2>
+                        <span class="menu__list__trader__description">{{description}}</span>
+                    </li>
+                {{/traders}}
+                </ul>
+                {{/isToday}}
+                {{^isToday}}
+                <h3 class="menu__closed">isn't on today</h3>
+                {{/isToday}}
             {{/date-0}}
             <div class="menu__tomorrow-list">
                 {{#date-1}}

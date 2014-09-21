@@ -27,7 +27,7 @@ sources["markets"].forEach(function(source) {
     
         // Create Structure for data
         var output = {};
-        output["lastUpdated"] = Date();
+        output["lastUpdated"] = new Date();
         output["url"] = url;
         output["marketName"] = $(".col_left h3:first-of-type").text();
 
@@ -37,6 +37,7 @@ sources["markets"].forEach(function(source) {
             output[index] = {};
             output[index]["traders"] = [];
             output[index]["date"] = $(this).attr("rel");
+            output[index]["timestamp"] = $(this).attr("id").replace("date-", "");
             var numOfTraders = $(this).find("ul li").length;
     
             $(this).find("ul li").each(function(subIndex) {
@@ -56,6 +57,13 @@ sources["markets"].forEach(function(source) {
                 }
                 output[index]["traders"].push(trader);
             });
+
+            var today = output["lastUpdated"].getFullYear() + "-" + ('0' + (output["lastUpdated"].getMonth()+1)).slice(-2) + "-" + output["lastUpdated"].getDate();
+            if (output[index]["timestamp"] == today) {
+                output[index]["isToday"] = true;
+            } else {
+                output[index]["isToday"] = false;
+            }
         });
 
         // Create Folder
@@ -69,33 +77,27 @@ sources["markets"].forEach(function(source) {
             });
         }
 
-        // Check if data is returned
-        if(typeof output["date-0"] === 'undefined'){
-            console.log("No data for " + source["handle"] + ", nothing written");
-        } else {
-            // Compile html using template.html
-            
-            var template = handlebars.compile(html);
-            var result = template(output);
+        // Compile html using template.html
+        var template = handlebars.compile(html);
+        var result = template(output);
 
-            // Output file
-            fs.writeFile("../" + source["handle"] + "/index.html", result, function(err) {
+        // Output file
+        fs.writeFile("../" + source["handle"] + "/index.html", result, function(err) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("File Written");
+            }
+        });
+
+        if (jsonExport == true) {
+            fs.writeFile("../" + source["handle"] + "/api.json", JSON.stringify(output), function(err) {
                 if (err) {
                     console.log(err);
                 } else {
-                    console.log("File Written");
+                    console.log("Json Written");
                 }
             });
-
-            if (jsonExport == true) {
-                fs.writeFile("../" + source["handle"] + "/api.json", JSON.stringify(output), function(err) {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        console.log("Json Written");
-                    }
-                });
-            }
         }
     });
 });

@@ -43,4 +43,13 @@
             color: $off-blue;
         }
     }
+
+    .menu__closed {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: $off-blue;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 40px;
+    }
 }
