@@ -54,14 +54,11 @@ sources["markets"].forEach(function(source) {
                 output[index]["traders"].push(trader);
             });
         });
-    
-        // Compile html using template.html
-        var template = handlebars.compile(html);
-        var result = template(output);
+
         // Create Folder
         if (!fs.existsSync("../" + source["handle"])) {
             fs.mkdir('../' + source["handle"], function (err) {
-                if (err)  {
+                if (err) {
                     throw err;
                 } else {
                     console.log("Folder created for " + source["handle"]);
@@ -69,23 +66,32 @@ sources["markets"].forEach(function(source) {
             });
         }
 
-        // Output file
-        fs.writeFile("../" + source["handle"] + "/index.html", result, function(err) {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log("File Written");
-            }
-        });
-    
-        if (jsonExport == true) {
-            fs.writeFile("../" + source["handle"] + "/api.json", JSON.stringify(output), function(err) {
+        // Check if data is returned
+        if(typeof output["date-0"] === 'undefined'){
+            console.log("No data for " + source["handle"] + ", nothing written");
+        } else {
+            // Compile html using template.html
+            var template = handlebars.compile(html);
+            var result = template(output);
+
+            // Output file
+            fs.writeFile("../" + source["handle"] + "/index.html", result, function(err) {
                 if (err) {
                     console.log(err);
                 } else {
-                    console.log("Json Written");
+                    console.log("File Written");
                 }
             });
+
+            if (jsonExport == true) {
+                fs.writeFile("../" + source["handle"] + "/api.json", JSON.stringify(output), function(err) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log("Json Written");
+                    }
+                });
+            }
         }
     });
 });
