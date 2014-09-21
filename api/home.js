@@ -4,6 +4,9 @@ var cheerio = require('cheerio');
 var handlebars = require("handlebars");
 var fs = require("fs");
 
+// Helpers
+var getHandlebarsPartials = require("./helpers/getHandlebarsPartials");
+
 // External Sources
 require.extensions['.html'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
