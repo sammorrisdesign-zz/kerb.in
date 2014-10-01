@@ -58,7 +58,7 @@ sources["markets"].forEach(function(source) {
                 output[index]["traders"].push(trader);
             });
 
-            var today = output["lastUpdated"].getFullYear() + "-" + ('0' + (output["lastUpdated"].getMonth()+1)).slice(-2) + "-" + output["lastUpdated"].getDate();
+            var today = output["lastUpdated"].getFullYear() + "-" + ('0' + (output["lastUpdated"].getMonth()+1)).slice(-2) + "-" + ('0' + output["lastUpdated"].getDate()).slice(-2);
             if (output[index]["timestamp"] == today) {
                 output[index]["isToday"] = true;
             } else {
