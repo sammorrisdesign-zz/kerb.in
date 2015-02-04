@@ -21,8 +21,11 @@ linters:
     style: double_quotes
 
   SelectorFormat:
-    enabled: true
+    enabled: false
     convention: BEM
 
   TrailingSemicolonAfterPropertyValue:
+    enabled: false
+
+  VendorPrefixes:
     enabled: false
