@@ -11,7 +11,7 @@ var getHandlebarsPartials = require("./helpers/getHandlebarsPartials");
 require.extensions['.html'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
 };
-var html = require("../template/home.html");
+var html = require("../_template/home.html");
 var markets = require("./markets.json");
 
 // Compile html using template.html

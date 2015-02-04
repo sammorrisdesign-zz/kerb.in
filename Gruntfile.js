@@ -13,39 +13,39 @@ module.exports = function(grunt) {
     // Task configuration.
     watch: {
       scsslint: {
-        files: 'template/**/*.scss',
+        files: '_template/**/*.scss',
         tasks: ['scsslint']
       },
       css: {
-        files: 'template/**/*.scss',
+        files: '_template/**/*.scss',
         tasks: ['sass']
       },
       node: {
-        files: ['api/api.js', 'template/market.html'],
+        files: ['_api/api.js', '_template/market.html'],
         tasks: ['shell:api']
       }
     },
     sass: {
       dist: {
         files: {
-            'style.css' : 'template/scss/style.scss'
+            'style.css' : '_template/scss/style.scss'
         }
       }
     },
     scsslint: {
       allFiles: [
-        'template/**/*.scss'
+        '_template/**/*.scss'
       ],
       options: {
-        config: 'template/scss/.scss-lint.yml'
+        config: '_template/scss/.scss-lint.yml'
       }
     },
     shell: {
       api: {
-        command: ['cd api', 'node api.js'].join('&&')
+        command: ['cd _api', 'node api.js'].join('&&')
       },
       index: {
-        command: ['cd api', 'node markets.js', 'node home.js'].join('&&')
+        command: ['cd _api', 'node markets.js', 'node home.js'].join('&&')
       }
     }
   });

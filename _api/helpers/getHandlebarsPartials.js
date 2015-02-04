@@ -1,7 +1,7 @@
 var handlebars = require('handlebars');
 var fs = require('fs');
 
-var partialsDir = __dirname + '/../../template/partials';
+var partialsDir = __dirname + '/../../_template/partials';
 
 var filenames = fs.readdirSync(partialsDir);
 
