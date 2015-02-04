@@ -5,4 +5,5 @@ index.html
 .sass-cache
 .sass-cache/
 style.css
+style.css.map
 node_modules
