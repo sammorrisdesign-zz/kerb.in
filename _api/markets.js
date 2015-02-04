@@ -18,7 +18,7 @@ request({
     output["url"] = url;
 
     // Target panel on Kerb website
-    $("#nav_markets ul li").each(function(index) {
+    $("#nav_trader_map ul li").each(function(index) {
         var market = {};
         market["name"] = $(this).text();
         market["handle"] = $(this).find("a").attr("href").replace("/", "");
