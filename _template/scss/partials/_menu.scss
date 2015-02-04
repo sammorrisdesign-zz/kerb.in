@@ -1,55 +1,66 @@
 .menu {
+    position: relative;
+    background-color: $light-blue;
 
-    .menu__date {
-        text-align: center;
-        color: $off-blue;
-        font-size: 1.8rem;
-    }
-
-    .menu__list {
-        margin: 20px 0;
-        border: 6px solid $yellow;
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 50%;
+        left: 0;
         background-color: $white;
-        padding: 0 20px;
-
-        .menu__list__trader {
-            margin: 20px 0;
-            text-transform: uppercase;
-
-            .menu__list__trader__name {
-                color: $light-red;
-                font-size: 2.6rem;
-                font-weight: 700;
-            }
-
-            .menu__list__trader__description {
-                color: $off-blue;
-                font-size: 1.6rem;
-            }
-        }
+        content: "";
     }
 
-    .menu__tomorrow-list {
-        display: none;
-        padding: 20px 0 6px;
-        font-size: 1.6rem;
-
-        .menu__tomorrow-list__date {
-            margin: 0 0 6px 1px;
-            color: $grey;
-        }
-        
-        .menu__tomorrow-list__traders {
-            color: $off-blue;
-        }
+    .container {
+        position: relative;
     }
+}
 
-    .menu__closed {
-        margin-bottom: 40px;
-        text-align: center;
+.menu__date {
+    text-align: center;
+    color: $blue;
+    font-size: 1.8rem;
+}
+
+.menu__list {
+
+    .menu__list__trader {
         text-transform: uppercase;
-        color: $off-blue;
-        font-size: 3.2rem;
-        font-weight: bold;
+
+        .menu__list__trader__name {
+            color: $light-red;
+            font-size: 2.6rem;
+            font-weight: 700;
+        }
+
+        .menu__list__trader__description {
+            color: $off-blue;
+            font-size: 1.6rem;
+        }
     }
+}
+
+.menu__tomorrow-list {
+    display: none;
+    padding: 20px 0 6px;
+    font-size: 1.6rem;
+
+    .menu__tomorrow-list__date {
+        margin: 0 0 6px 1px;
+        color: $grey;
+    }
+    
+    .menu__tomorrow-list__traders {
+        color: $off-blue;
+    }
+}
+
+.menu__closed {
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $off-blue;
+    font-size: 3.2rem;
+    font-weight: bold;
 }

@@ -15,12 +15,16 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-    <main class="container">
-        <h1 class="title"><a href="{{url}}">Kerb In</a> {{marketName}}</h1>
-        <div class="menu">
+    <header>
+        <div class="container">
+            <h1 class="title"><a href="{{url}}">Kerb<span class="title__period">.</span>In</a><br /> {{marketName}}</h1>
+            <h3 class="menu__date">Lineup for {{date}}</h3>
+        </div>
+    </header>
+    <main class="menu">
+        <div class="container">
             {{#date-0}}
                 {{#isToday}}
-                <h3 class="menu__date">for {{date}}</h3>
                 <ul class="menu__list">
                 {{#traders}}
                     <li class="menu__list__trader">

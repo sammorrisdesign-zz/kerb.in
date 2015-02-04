@@ -1,10 +1,26 @@
-footer {
-    margin: 20px 0;
+.footer {
+    background-color: $blue;
+    padding: 20px 0;
+    overflow: auto;
     text-align: center;
-    color: $off-blue;
+    color: $white;
     font-size: 1.6rem;
 
     a {
-        color: $yellow;
+        color: $light-blue;
+    }
+}
+
+.footer__description {
+    float: left;
+}
+
+.footer__link-list {
+    float: right;
+    width: 180px;
+    text-align: left;
+
+    .footer__link {
+        margin-bottom: 8px;
     }
 }

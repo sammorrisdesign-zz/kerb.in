@@ -1,13 +1,13 @@
 // Vendors
-@import "vendor/sass-mq/_mq";
-@import "vendor/reset/_reset";
+@import "vendor/sass-mq/mq";
+@import "vendor/reset/reset";
 
 // Modules
-@import "modules/_vars";
-@import "modules/_mixins";
+@import "modules/vars";
+@import "modules/mixins";
 
 // Partials
-@import "partials/_base";
-@import "partials/_menu";
-@import "partials/_market-list";
-@import "partials/_footer";
+@import "partials/base";
+@import "partials/menu";
+@import "partials/market-list";
+@import "partials/footer";
