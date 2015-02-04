@@ -20,8 +20,8 @@ linters:
   StringQuotes:
     style: double_quotes
 
-  NameFormat:
-    enabled: false
+  SelectorFormat:
+    enabled: true
     convention: BEM
 
   TrailingSemicolonAfterPropertyValue:
