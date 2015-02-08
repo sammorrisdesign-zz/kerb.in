@@ -80,10 +80,12 @@
 }
 
 .menu__closed {
-    margin-bottom: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $off-blue;
-    font-size: 3.2rem;
-    font-weight: bold;
+    padding-bottom: 20px;
+    background-color: $white;
+    font-size: 2.6rem;
+
+    @include mq(tablet) {
+        padding: 40px 20px;
+        font-size: 3.2rem;
+    }
 }
