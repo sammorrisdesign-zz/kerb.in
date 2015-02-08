@@ -3,7 +3,6 @@ var request = require('request');
 var cheerio = require('cheerio');
 var handlebars = require("handlebars");
 var fs = require("fs");
-var escape = require("escape-html");
 
 // Helpers
 var getHandlebarsPartials = require("./helpers/getHandlebarsPartials");
