@@ -16,7 +16,8 @@ var descriptions = require("./descriptions.json");
 var sources = require("./markets.json");
 
 // Options
-var jsonExport = false;
+var jsonExport = true;
+var forceToday = true;
 var url = "http://www.kerb.in";
 
 sources["markets"].forEach(function(source) {
@@ -59,7 +60,7 @@ sources["markets"].forEach(function(source) {
             });
 
             var today = output["lastUpdated"].getFullYear() + "-" + ('0' + (output["lastUpdated"].getMonth()+1)).slice(-2) + "-" + ('0' + output["lastUpdated"].getDate()).slice(-2);
-            if (output[index]["timestamp"] == today) {
+            if (output[index]["timestamp"] == today || forceToday === true && index === "date-0") {
                 output[index]["isToday"] = true;
             } else {
                 output[index]["isToday"] = false;
@@ -79,8 +80,7 @@ sources["markets"].forEach(function(source) {
 
         // Compile html using template.html
         var template = handlebars.compile(html);
-        var dummyData = require("../kings-cross/api.json");
-        var result = template(dummyData);
+        var result = template(output);
 
         // Output file
         fs.writeFile("../" + source["handle"] + "/index.html", result, function(err) {
