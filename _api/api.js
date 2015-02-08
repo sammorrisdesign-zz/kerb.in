@@ -3,6 +3,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var handlebars = require("handlebars");
 var fs = require("fs");
+var escape = require("escape-html");
 
 // Helpers
 var getHandlebarsPartials = require("./helpers/getHandlebarsPartials");
@@ -11,6 +12,11 @@ var getHandlebarsPartials = require("./helpers/getHandlebarsPartials");
 require.extensions['.html'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
 };
+
+require.extensions['.svg'] = function (module, filename) {
+    module.exports = fs.readFileSync(filename, 'utf8');
+};
+
 var html = require("../_template/market.html");
 var descriptions = require("./descriptions.json");
 var sources = require("./markets.json");
@@ -53,6 +59,11 @@ sources["markets"].forEach(function(source) {
                 }
                 trader["href"] = $(this).find("h4 a").attr("href");
                 trader["image"] = $(this).find("a > img").attr("src");
+                if (fs.existsSync("../_illustrations" + handle)) {
+                    trader["illustration"] = require("../_illustrations/" + handle + ".svg");
+                } else {
+                    trader["illustration"] = require("../_illustrations/generic.svg");
+                }
                 if (numOfTraders - 1 == subIndex) {
                     trader["last"] = true;
                 }
