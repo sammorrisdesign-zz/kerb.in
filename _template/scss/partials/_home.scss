@@ -3,9 +3,11 @@
     background-color: $white;
 }
 
-.market-list {
-    margin-top: 20px;
+.home__header {
+    padding-bottom: 0;
+}
 
+.market-list {
     .market-list__item {
         padding: 6px 0;
         font-size: 2.4rem;
