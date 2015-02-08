@@ -5,6 +5,7 @@
     text-align: center;
     color: $white;
     font-size: 1.6rem;
+    line-height: 1.4;
 
     a {
         color: $light-blue;
@@ -12,15 +13,23 @@
 }
 
 .footer__description {
-    float: left;
+    @include mq(tablet) {
+        float: left;
+    }
 }
 
 .footer__link-list {
-    float: right;
-    width: 180px;
-    text-align: left;
+    @include mq(tablet) {
+        float: right;
+        width: 180px;
+        text-align: left;
+    }
 
     .footer__link {
-        margin-bottom: 8px;
+        margin: 8px 0;
+
+        @include mq(tablet) {
+            margin-top: 0;
+        }
     }
 }
