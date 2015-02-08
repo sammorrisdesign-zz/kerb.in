@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       node: {
-        files: ['_api/api.js', '_template/**/*.html'],
+        files: ['_api/api.js', '_template/**/*.html', '_illustrations/**/*.svg'],
         tasks: ['shell:api']
       }
     },
