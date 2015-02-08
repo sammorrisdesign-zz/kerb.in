@@ -22,6 +22,7 @@
 .menu__wrapper {
     position: relative;
     overflow-x: scroll;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
@@ -30,8 +31,11 @@
 }
 
 .menu__list {
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
     display: inline-flex;
     min-width: 100%;
+    -webkit-justify-content: center;
     justify-content: center;
 
     .menu__list__trader {
