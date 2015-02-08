@@ -17,10 +17,10 @@
 <body>
     <main class="container home">
         <h1 class="title">Kerb In...</h1>
+        <h3 class="sub-title">Select a market</h3>
         <ul class="market-list">
-            <h3 class="market-list__title">Select a market</h3>
             {{#markets}}
-            <li class="market-list__item"><a href="{{localUrl}}">{{name}}</a></li>
+            <li class="market-list__item title"><a href="{{localUrl}}">{{name}}</a></li>
             {{/markets}}
         </ul>
     </main>

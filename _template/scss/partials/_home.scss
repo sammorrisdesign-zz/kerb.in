@@ -4,19 +4,14 @@
 }
 
 .market-list {
-    margin: 30px 0 50px;
+    margin-top: 20px;
 
-    .market-list__title {
-        text-align: center;
-        color: $off-blue;
-        font-size: 1.8rem;
-    }
-    
     .market-list__item {
-        margin: 12px 0;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 3.6rem;
-        font-weight: 700;
+        padding: 6px 0;
+        font-size: 2.4rem;
+
+        @include mq(tablet) {
+            font-size: 3.6rem;
+        }
     }
 }
