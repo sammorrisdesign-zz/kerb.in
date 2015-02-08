@@ -18,36 +18,26 @@
     <header>
         <div class="container">
             <h1 class="title"><a href="{{url}}">Kerb<span class="title__period">.</span>In</a><br /> {{marketName}}</h1>
-            <h3 class="menu__date">Lineup for {{date}}</h3>
+            <h3 class="header__date">Lineup for {{date}}</h3>
         </div>
     </header>
     <main class="menu">
-        <div class="container">
-            {{#date-0}}
-                {{#isToday}}
-                <ul class="menu__list">
-                {{#traders}}
-                    <li class="menu__list__trader">
-                        <h2 class="menu__list__trader__name">{{standName}}</h2>
-                        <span class="menu__list__trader__description">{{description}}</span>
-                    </li>
-                {{/traders}}
-                </ul>
-                {{/isToday}}
-                {{^isToday}}
-                <h3 class="menu__closed">isn't on today</h3>
-                {{/isToday}}
-            {{/date-0}}
-            <div class="menu__tomorrow-list">
-                {{#date-1}}
-                <h3 class="menu__tomorrow-list__date">{{date}}</h3>
-                <p class="menu__tomorrow-list__traders">
-                {{#traders}}
-                    {{standName}}{{^last}}, {{/last}}
-                {{/traders}}
-                </p>
-                {{/date-1}}
-            </div>
+        <div class="menu__wrapper">
+        {{#date-0}}
+            {{#isToday}}
+            <ul class="menu__list">
+            {{#traders}}
+                <li class="menu__list__trader">
+                    <h2 class="menu__list__trader__name">{{standName}}</h2>
+                    <span class="menu__list__trader__description">{{description}}</span>
+                </li>
+            {{/traders}}
+            </ul>
+            {{/isToday}}
+            {{^isToday}}
+            <h3 class="menu__closed">isn't on today</h3>
+            {{/isToday}}
+        {{/date-0}}
         </div>
     </main>
 
