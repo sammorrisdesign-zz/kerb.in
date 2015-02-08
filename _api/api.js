@@ -59,7 +59,7 @@ sources["markets"].forEach(function(source) {
                 }
                 trader["href"] = $(this).find("h4 a").attr("href");
                 trader["image"] = $(this).find("a > img").attr("src");
-                if (fs.existsSync("../_illustrations" + handle)) {
+                if (fs.existsSync("../_illustrations/" + handle + ".svg")) {
                     trader["illustration"] = require("../_illustrations/" + handle + ".svg");
                 } else {
                     trader["illustration"] = require("../_illustrations/generic.svg");
