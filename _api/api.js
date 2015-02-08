@@ -16,7 +16,7 @@ var descriptions = require("./descriptions.json");
 var sources = require("./markets.json");
 
 // Options
-var jsonExport = true;
+var jsonExport = false;
 var url = "http://www.kerb.in";
 
 sources["markets"].forEach(function(source) {
@@ -79,7 +79,8 @@ sources["markets"].forEach(function(source) {
 
         // Compile html using template.html
         var template = handlebars.compile(html);
-        var result = template(output);
+        var dummyData = require("../kings-cross/api.json");
+        var result = template(dummyData);
 
         // Output file
         fs.writeFile("../" + source["handle"] + "/index.html", result, function(err) {
