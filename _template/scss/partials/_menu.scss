@@ -39,16 +39,8 @@
         height: 500px;
         text-align: center;
 
-        .menu__list__trader__name {
-            text-transform: uppercase;
-            color: $black;
+        .title {
             font-size: 2.6rem;
-            font-weight: 700;
-        }
-
-        .menu__list__trader__description {
-            color: $blue;
-            font-size: 1.8rem;
         }
     }
 }

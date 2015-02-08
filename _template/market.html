@@ -18,18 +18,18 @@
     <header>
         <div class="container">
             <h1 class="title"><a href="{{url}}">Kerb<span class="title__period">.</span>In</a><br /> {{marketName}}</h1>
-            <h3 class="header__date">Lineup for {{date}}</h3>
+            {{#date-0}}
+            <h3 class="sub-title">Lineup for {{date}}</h3>
         </div>
     </header>
     <main class="menu">
         <div class="menu__wrapper">
-        {{#date-0}}
             {{#isToday}}
             <ul class="menu__list">
             {{#traders}}
                 <li class="menu__list__trader">
-                    <h2 class="menu__list__trader__name">{{standName}}</h2>
-                    <span class="menu__list__trader__description">{{description}}</span>
+                    <h2 class="title">{{standName}}</h2>
+                    <span class="sub-title">{{description}}</span>
                 </li>
             {{/traders}}
             </ul>
