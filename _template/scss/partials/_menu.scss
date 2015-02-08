@@ -31,6 +31,8 @@
 
 .menu__list {
     display: inline-flex;
+    min-width: 100%;
+    justify-content: center;
 
     .menu__list__trader {
         display: inline-block;
