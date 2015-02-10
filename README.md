@@ -5,11 +5,17 @@ A service that tells you what's on Kerb KX
 
 ## Requirements
 * Ruby 1.9.2
-* [Node](nodejs.org) with the latest version of Node Package Manager
+* [Node](http://nodejs.org) with the latest version of Node Package Manager
 
 ## Description
 
-This project uses Node scrape the Kerb website, Handlebrs to output static html and Sass to output CSS. These tasks are automated using [Grunt](http://gruntjs.com/).
+This project uses:
+
+* Node (to scrape the Kerb website)
+* Handlebars (to output static html)
+* Sass (to output CSS) 
+
+These tasks are automated using [Grunt](http://gruntjs.com/).
 
 ## Installation & Usage
 
