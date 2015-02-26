@@ -12,10 +12,6 @@ require.extensions['.html'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
 };
 
-require.extensions['.svg'] = function (module, filename) {
-    module.exports = fs.readFileSync(filename, 'utf8');
-};
-
 var html = require("../_template/market.html");
 var descriptions = require("./descriptions.json");
 var sources = require("./markets.json");
