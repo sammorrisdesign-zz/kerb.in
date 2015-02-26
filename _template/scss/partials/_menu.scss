@@ -44,6 +44,7 @@
 
         .illustration {
             max-height: 140px;
+            margin-bottom: 8px;
 
             @include mq(tablet) {
                 max-height: 180px;
