@@ -42,6 +42,7 @@ define([
                 this.randomTransition();
                 this.checkToDisable(target);
                 this.updateDate();
+                this.resetPosition();
             }
         },
 
@@ -78,6 +79,10 @@ define([
                     '-o-animation-delay:' + duration + 'ms; ' + 
                     'animation-delay:' + duration + 'ms;');
             }
+        },
+
+        resetPosition: function() {
+            bonzo(qwery('.menu__wrapper')[0]).scrollLeft(0);
         }
     }
 });
