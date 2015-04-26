@@ -44,6 +44,9 @@ sources["markets"].forEach(function(source) {
 
             $(this).find("ul li").each(function(subIndex) {
                 var handle = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", "");
+                if (handle == 'noble-espresso') {
+                    return;
+                }
                 var trader = {};
                 trader["handle"] = handle;
                 trader["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "").replace(" - Seychelles Kitchen", "");
@@ -64,6 +67,7 @@ sources["markets"].forEach(function(source) {
                 }
                 market["traders"].push(trader);
             });
+
             output["markets"].push(market);
 
 /*
