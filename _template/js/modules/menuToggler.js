@@ -39,6 +39,7 @@ define([
                     target = current - 1;
                 }
                 this.showMenu(qwery('.menu__list--' + target));
+                this.randomTransition();
                 this.checkToDisable(target);
                 this.updateDate();
             }
@@ -65,6 +66,18 @@ define([
         updateDate: function() {
             var date = bonzo(qwery('.is-visible')[0]).attr('data-date');
             bonzo(qwery('.js-toggle-date')[0]).html(date);
+        },
+
+        randomTransition: function() {
+            var numOfTraders = bonzo(qwery('.is-visible .menu__list__trader')).length;
+            for (i = 0; i < numOfTraders; i++) {
+                duration = Math.floor(Math.random() * (500 - 100) + 100) + 1;
+                bonzo(qwery('.is-visible .menu__list__trader--' + i)).attr('style', 
+                    '-webkit-animation-delay:' + duration + 'ms; ' +
+                    '-moz-animation-delay:' + duration + 'ms; ' +
+                    '-o-animation-delay:' + duration + 'ms; ' + 
+                    'animation-delay:' + duration + 'ms;');
+            }
         }
     }
 });
