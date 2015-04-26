@@ -43,17 +43,20 @@ sources["markets"].forEach(function(source) {
             var numOfTraders = $(this).find("ul li").length;
 
             $(this).find("ul li").each(function(subIndex) {
-                var handle = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", "");
+                var handle = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", ""),
+                    trader = {};
+
                 if (handle == 'noble-espresso') {
                     return;
                 }
-                var trader = {};
+
+                // Sort out the data
                 trader["handle"] = handle;
                 trader["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "").replace(" - Seychelles Kitchen", "");
                 if (descriptions[handle] != void(0)) {
                     trader["description"] = descriptions[handle];
                 } else {
-                    trader["description"] = $(this).find("p").text();
+                    trader["description"] = "";
                 }
                 trader["href"] = $(this).find("h4 a").attr("href");
                 trader["image"] = $(this).find("a > img").attr("src");
