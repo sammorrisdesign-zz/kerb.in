@@ -1,0 +1,49 @@
+@mixin menu-colour($light, $dark) {
+    @at-root {
+        body#{&} {
+            background-color: $dark;
+        }
+    }
+
+    .title {
+        .title__period {
+            color: $dark;
+        }
+    }
+
+    .sub-title {
+        color: $dark;
+    }
+
+    .menu {
+        background-color: $light;
+    }
+
+    .menu-date {
+        color: $dark;
+    }
+
+    footer {
+        background-color: $dark;
+
+        a {
+            color: $light;
+        }
+    }
+}
+
+.market--gherkin {
+    @include menu-colour($light-gherkin, $gherkin);
+}
+
+.market--kings-cross {
+    @include menu-colour($light-kings-cross, $kings-cross);
+}
+
+.market--paddington {
+    @include menu-colour($light-paddington, $paddington);
+}
+
+.market--uclu-monthly- {
+    @include menu-colour($light-uclu, $uclu);
+}

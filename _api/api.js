@@ -33,6 +33,7 @@ sources["markets"].forEach(function(source) {
         output["todaysDate"] = null;
         output["url"] = url;
         output["marketName"] = $(".col_left h3:first-of-type").text();
+        output["marketHandle"] = source["handle"];
         output["isClosed"] = true;
         output["markets"] = [];
         

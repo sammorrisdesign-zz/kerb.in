@@ -1,6 +1,6 @@
 .menu {
     position: relative;
-    background-color: $light-blue;
+    background-color: $light-default;
 
     &:before {
         position: absolute;
@@ -15,7 +15,7 @@
 
 .menu__date {
     text-align: center;
-    color: $blue;
+    color: $default;
     font-size: 1.8rem;
 }
 
@@ -69,21 +69,6 @@
                 font-size: 2.6rem;
             }
         }
-    }
-}
-
-.menu__tomorrow-list {
-    display: none;
-    padding: 20px 0 6px;
-    font-size: 1.6rem;
-
-    .menu__tomorrow-list__date {
-        margin: 0 0 6px 1px;
-        color: $grey;
-    }
-    
-    .menu__tomorrow-list__traders {
-        color: $off-blue;
     }
 }
 
