@@ -4,7 +4,7 @@
 
     &:before {
         position: absolute;
-        top: 47%;
+        top: 53%;
         right: 0;
         bottom: 0;
         left: 0;
@@ -12,7 +12,7 @@
         content: "";
 
         @include mq(tablet) {
-            top: 42%;
+            top: 58%;
         }
     }
 }
