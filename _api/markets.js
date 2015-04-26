@@ -21,10 +21,12 @@ request({
     $("#nav_trader_map ul li").each(function(index) {
         var market = {};
         market["name"] = $(this).text();
-        market["handle"] = $(this).find("a").attr("href").replace("/", "");
+        market["handle"] = $(this).find("a").attr("href").replace(/\//g, "");
         market["uri"] = "http://www.kerbfood.com" + $(this).find("a").attr("href");
         market["localUrl"] = url + $(this).find("a").attr("href");
-        output["markets"].push(market);
+        if (market["handle"] !== "kerb-does-alchemy") {
+            output["markets"].push(market);
+        }
     });
 
     // Output file
