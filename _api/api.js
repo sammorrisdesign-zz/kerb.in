@@ -102,14 +102,6 @@ sources["markets"].forEach(function(source) {
             if (market.traders.length > 0) {
                 output['markets'].push(market);
             }
-
-            /*
-            if (output[index]["timestamp"] == today || forceToday === true && index === "date-0") {
-                output[index]["isToday"] = true;
-            } else {
-                output[index]["isToday"] = false;
-            }
-*/
         });
 
         if(output.markets[0].date == today) {

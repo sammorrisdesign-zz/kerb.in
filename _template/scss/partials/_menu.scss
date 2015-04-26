@@ -42,7 +42,7 @@
     position: absolute;
     display: none;
 
-    &:first-of-type {
+    &.is-visible {
         display: block;
     }
 
@@ -95,5 +95,11 @@
     @include mq(tablet) {
         padding: 40px 20px;
         font-size: 3.2rem;
+    }
+}
+
+.toggle {
+    &.is-disabled {
+        opacity: .5;
     }
 }
