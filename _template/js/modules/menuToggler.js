@@ -1,17 +1,14 @@
 define([
     'libs/bonzo',
     'libs/bean',
+    'libs/keymaster',
     'libs/qwery'
 ], function(
     bonzo,
     bean,
+    keypress,
     qwery
 ) {
-    var config = {
-        kitId: 'hpa3kru',
-        scriptTimeout: 3000
-    };
-
     return {
         init: function() {
             this.bindEvents();
@@ -20,27 +17,31 @@ define([
 
         bindEvents: function() {
             bean.on(qwery('.js-toggle-prev')[0], 'click', function(e) {
-                if (!this.checkIfDisabled(e)) {
-                    this.switchMenu('prev');
-                }
+                this.switchMenu('prev');
+            }.bind(this));
+            key('left', function(e) {
+                this.switchMenu('prev');
             }.bind(this));
             bean.on(qwery('.js-toggle-next')[0], 'click', function(e) {
-                if (!this.checkIfDisabled(e)) {
-                    this.switchMenu('next');
-                }
+                this.switchMenu('next');
+            }.bind(this));
+            key('right', function(e) {
+                this.switchMenu('next');
             }.bind(this));
         },
 
         switchMenu: function(direction) {
-            var current = parseInt(qwery('.is-visible')[0].className.split(' ')[1].replace('menu__list--', ''));
-            if (direction == 'next') {
-                target = current + 1;
-            } else if (direction == 'prev') {
-                target = current - 1;
+            if (!this.checkIfDisabled(direction)) {
+                var current = parseInt(qwery('.is-visible')[0].className.split(' ')[1].replace('menu__list--', ''));
+                if (direction == 'next') {
+                    target = current + 1;
+                } else if (direction == 'prev') {
+                    target = current - 1;
+                }
+                this.showMenu(qwery('.menu__list--' + target));
+                this.checkToDisable(target);
+                this.updateDate();
             }
-            this.showMenu(qwery('.menu__list--' + target));
-            this.checkToDisable(target);
-            this.updateDate();
         },
 
         showMenu: function(target) {
@@ -57,8 +58,8 @@ define([
             }
         },
         
-        checkIfDisabled: function(e) {
-            return bonzo(qwery(e.target)[0]).hasClass('is-disabled');
+        checkIfDisabled: function(direction) {
+            return bonzo(qwery('.js-toggle-' + direction)[0]).hasClass('is-disabled');
         },
 
         updateDate: function() {
