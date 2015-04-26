@@ -71,7 +71,9 @@ sources["markets"].forEach(function(source) {
                 market["traders"].push(trader);
             });
 
-            output["markets"].push(market);
+            if (market.traders.length > 0) {
+                output['markets'].push(market);
+            };
 
 /*
             var today = output["lastUpdated"].getFullYear() + "-" + ('0' + (output["lastUpdated"].getMonth()+1)).slice(-2) + "-" + ('0' + output["lastUpdated"].getDate()).slice(-2);
