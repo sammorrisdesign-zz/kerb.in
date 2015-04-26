@@ -33,6 +33,7 @@ sources["markets"].forEach(function(source) {
         output["todaysDate"] = null;
         output["url"] = url;
         output["marketName"] = $(".col_left h3:first-of-type").text();
+        output["today"] = false;
         output["markets"] = [];
         
         // Add Today's Date
@@ -54,13 +55,13 @@ sources["markets"].forEach(function(source) {
         var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         var today = dayNames[output["lastUpdated"].getDay()] + " " +
+                    suffixOf(output["lastUpdated"].getDate()) + " " +
                     monthNames[output["lastUpdated"].getMonth()] + " " +
-                    suffixOf(output["lastUpdated"].getDate()) + ' ' +
                     output["lastUpdated"].getFullYear();
 
         output["todaysDate"] = today;
 
-        // Target panel on Kerb website
+        // Target panel on Kerb website and loop through each day
         $(".rota_panel > ul > li").each(function(index) {
             market = {};
             market["traders"] = [];
@@ -68,6 +69,7 @@ sources["markets"].forEach(function(source) {
             market["timestamp"] = $(this).attr("id").replace("date-", "");
             var numOfTraders = $(this).find("ul li").length;
 
+            // Loop through each trader
             $(this).find("ul li").each(function(subIndex) {
                 var handle = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", ""),
                     trader = {};
@@ -99,7 +101,7 @@ sources["markets"].forEach(function(source) {
 
             if (market.traders.length > 0) {
                 output['markets'].push(market);
-            };
+            }
 
             /*
             if (output[index]["timestamp"] == today || forceToday === true && index === "date-0") {
@@ -109,6 +111,10 @@ sources["markets"].forEach(function(source) {
             }
 */
         });
+
+        if(output.markets[0].date == today) {
+            output["today"] = true;
+        }
 
         // Create Folder
         if (!fs.existsSync("../" + source["handle"])) {
