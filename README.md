@@ -1,7 +1,7 @@
-whatsonkerb
+Kerb.in
 ===========
 
-A service that tells you what's on Kerb KX
+A service that tells you what's on at Kerb
 
 ## Requirements
 * Ruby 1.9.2
