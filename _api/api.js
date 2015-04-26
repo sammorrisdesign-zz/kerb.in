@@ -30,9 +30,35 @@ sources["markets"].forEach(function(source) {
         // Create Structure for data
         var output = {};
         output["lastUpdated"] = new Date();
+        output["todaysDate"] = null;
         output["url"] = url;
         output["marketName"] = $(".col_left h3:first-of-type").text();
         output["markets"] = [];
+        
+        // Add Today's Date
+        function suffixOf(i) {
+            var j = i % 10,
+                k = i % 100;
+            if (j == 1 && k != 11) {
+                return i + "st";
+            }
+            if (j == 2 && k != 12) {
+                return i + "nd";
+            }
+            if (j == 3 && k != 13) {
+                return i + "rd";
+            }
+            return i + "th";
+        }
+
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var today = dayNames[output["lastUpdated"].getDay()] + " " +
+                    monthNames[output["lastUpdated"].getMonth()] + " " +
+                    suffixOf(output["lastUpdated"].getDate()) + ' ' +
+                    output["lastUpdated"].getFullYear();
+
+        output["todaysDate"] = today;
 
         // Target panel on Kerb website
         $(".rota_panel > ul > li").each(function(index) {
@@ -75,8 +101,7 @@ sources["markets"].forEach(function(source) {
                 output['markets'].push(market);
             };
 
-/*
-            var today = output["lastUpdated"].getFullYear() + "-" + ('0' + (output["lastUpdated"].getMonth()+1)).slice(-2) + "-" + ('0' + output["lastUpdated"].getDate()).slice(-2);
+            /*
             if (output[index]["timestamp"] == today || forceToday === true && index === "date-0") {
                 output[index]["isToday"] = true;
             } else {

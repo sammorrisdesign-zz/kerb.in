@@ -24,6 +24,11 @@
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    height: 280px;
+
+    @include mq(tablet) {
+        height: 320px;
+    }
 
     &::-webkit-scrollbar {
         display: none;
@@ -34,6 +39,12 @@
     white-space: nowrap;
     text-align: center;
     min-width: 100%;
+    position: absolute;
+    display: none;
+
+    &.menu__list--0 {
+        display: block;
+    }
 
     .menu__list__trader {
         display: inline-block;
