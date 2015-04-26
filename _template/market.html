@@ -24,17 +24,17 @@
     </header>
     <main class="menu">
         <div class="menu__wrapper">
-            <ul class="menu__list">
             {{#markets}}
+            <ul class="menu__list menu__list--{{@index}}" data-date="{{date}}">
                 {{#traders}}
-                    <li class="menu__list__trader">
-                        <img src="{{illustration}}" class="illustration" />
-                        <h2 class="title">{{standName}}</h2>
-                        <span class="sub-title">{{description}}</span>
-                    </li>
+                <li class="menu__list__trader">
+                    <img src="{{illustration}}" class="illustration" />
+                    <h2 class="title">{{standName}}</h2>
+                    <span class="sub-title">{{description}}</span>
+                </li>
                 {{/traders}}
-            {{/markets}}
             </ul>
+            {{/markets}}
 <!--             <h3 class="menu__closed title">isn't on today</h3> -->
         </div>
     </main>
