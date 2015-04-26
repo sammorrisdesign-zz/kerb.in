@@ -6,10 +6,14 @@
         position: absolute;
         top: 0;
         right: 0;
-        bottom: 55%;
+        bottom: 47%;
         left: 0;
         background-color: $white;
         content: "";
+
+        @include mq(tablet) {
+            bottom: 42%;
+        }
     }
 }
 
