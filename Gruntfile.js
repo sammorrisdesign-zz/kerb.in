@@ -12,13 +12,9 @@ module.exports = function(grunt) {
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     watch: {
-      scsslint: {
-        files: '_template/scss/**/*.scss',
-        tasks: ['scsslint']
-      },
       css: {
         files: '_template/scss/**/*.scss',
-        tasks: ['sass']
+        tasks: ['scsslint', 'sass', 'autoprefixer']
       },
       js: {
         files: '_template/js/**/*.js',
@@ -42,6 +38,11 @@ module.exports = function(grunt) {
       ],
       options: {
         config: '_template/scss/.scss-lint.yml'
+      }
+    },
+    autoprefixer: {
+      dist: {
+        src: 'style.css'
       }
     },
     requirejs: {
@@ -82,10 +83,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task.
-  grunt.registerTask('default', ['shell:api', 'sass', 'scsslint', 'requirejs', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['shell:api', 'sass', 'scsslint', 'autoprefixer', 'requirejs', 'browserSync', 'watch']);
   
   // Init task
-  grunt.registerTask('init', ['shell:index', 'shell:api', 'sass']);
+  grunt.registerTask('init', ['shell:index', 'shell:api', 'sass', 'autoprefixer']);
 };
