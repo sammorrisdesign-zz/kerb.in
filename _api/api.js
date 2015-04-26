@@ -33,7 +33,7 @@ sources["markets"].forEach(function(source) {
         output["todaysDate"] = null;
         output["url"] = url;
         output["marketName"] = $(".col_left h3:first-of-type").text();
-        output["today"] = false;
+        output["isClosed"] = true;
         output["markets"] = [];
         
         // Add Today's Date
@@ -113,7 +113,7 @@ sources["markets"].forEach(function(source) {
         });
 
         if(output.markets[0].date == today) {
-            output["today"] = true;
+            output["isClosed"] = false;
         }
 
         // Create Folder

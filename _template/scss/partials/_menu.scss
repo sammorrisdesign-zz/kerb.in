@@ -42,7 +42,7 @@
     position: absolute;
     display: none;
 
-    &.menu__list--0 {
+    &:first-of-type {
         display: block;
     }
 

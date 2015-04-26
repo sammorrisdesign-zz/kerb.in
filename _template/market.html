@@ -12,20 +12,23 @@
     <link rel="stylesheet" href="../style.css">
 
     <!-- Fonts -->
-<!--
     <script type="text/javascript" src="//use.typekit.net/hpa3kru.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
--->
 </head>
-<body>
+<body data-current-menu="0">
     <header>
         <div class="container">
             <h1 class="title"><a href="{{url}}">Kerb<span class="title__period">.</span>In</a><br /> {{marketName}}</h1>
-            <h3 class="sub-title">{{todaysDate}}</h3>
+            <h3 class="sub-title"><span class="toggle toggle--prev js-toggle-prev">Prev</span> {{todaysDate}} <span class="toggle toggle--next js-toggle-next">Next</span></h3>
         </div>
     </header>
     <main class="menu">
         <div class="menu__wrapper">
+            {{#if isClosed}}
+                <ul class="menu__list menu__list--closed" data-date="{{todaysDate}}">
+                    <h3 class="menu__closed title">isn't on today</h3>
+                </ul>
+            {{/if}}
             {{#markets}}
             <ul class="menu__list menu__list--{{@index}}" data-date="{{date}}">
                 {{#traders}}
@@ -37,7 +40,6 @@
                 {{/traders}}
             </ul>
             {{/markets}}
-<!--        <h3 class="menu__closed title">isn't on today</h3> -->
         </div>
     </main>
 
