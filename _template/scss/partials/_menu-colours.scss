@@ -16,7 +16,9 @@
     }
 
     .menu {
-        background-color: $light;
+        &:before {
+            background-color: $light;
+        }
     }
 
     .menu-date {

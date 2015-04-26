@@ -1,18 +1,18 @@
 .menu {
     position: relative;
-    background-color: $light-default;
+    background-color: $white;
 
     &:before {
         position: absolute;
-        top: 0;
+        top: 47%;
         right: 0;
-        bottom: 47%;
+        bottom: 0;
         left: 0;
-        background-color: $white;
+        background-color: $light-default;
         content: "";
 
         @include mq(tablet) {
-            bottom: 42%;
+            top: 42%;
         }
     }
 }
