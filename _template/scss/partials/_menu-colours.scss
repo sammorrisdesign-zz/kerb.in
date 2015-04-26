@@ -40,6 +40,10 @@
 
 .market--kings-cross {
     @include menu-colour($light-kings-cross, $kings-cross);
+
+    .menu:after {
+        background-image: url("assets/kings-cross.png");
+    }
 }
 
 .market--paddington {

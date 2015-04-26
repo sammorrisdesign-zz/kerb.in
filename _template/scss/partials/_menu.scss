@@ -10,10 +10,24 @@
         left: 0;
         background-color: $light-default;
         content: "";
+        z-index: 2;
 
         @include mq(tablet) {
             top: 58%;
         }
+    }
+
+    &:after {
+        position: absolute;
+        top: -50%;
+        bottom: 42%;
+        right: 0;
+        left: 0;
+        background-repeat: repeat-x;
+        background-position: center bottom;
+        background-size: 1300px;
+        content: "";
+        opacity: .1;
     }
 }
 
@@ -29,6 +43,7 @@
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     height: 280px;
+    z-index: 5;
 
     @include mq(tablet) {
         height: 320px;
@@ -90,7 +105,6 @@
 
 .menu__closed {
     padding-bottom: 20px;
-    background-color: $white;
     font-size: 2.6rem;
     animation-delay: 200ms;
     animation: fade .5s forwards;
@@ -102,6 +116,8 @@
 }
 
 .toggle {
+    position: relative;
+    z-index: 5;
     cursor: pointer;
 
     &.is-disabled {
