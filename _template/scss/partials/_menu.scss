@@ -88,6 +88,8 @@
     padding-bottom: 20px;
     background-color: $white;
     font-size: 2.6rem;
+    animation-delay: 200ms;
+    animation: fade .5s forwards;
 
     @include mq(tablet) {
         padding: 40px 20px;
