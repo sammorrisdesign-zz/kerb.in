@@ -13,12 +13,16 @@ module.exports = function(grunt) {
     // Task configuration.
     watch: {
       scsslint: {
-        files: '_template/**/*.scss',
+        files: '_template/scss/**/*.scss',
         tasks: ['scsslint']
       },
       css: {
-        files: '_template/**/*.scss',
+        files: '_template/scss/**/*.scss',
         tasks: ['sass']
+      },
+      js: {
+        files: '_template/js/**/*.js',
+        tasks: ['requirejs']
       },
       node: {
         files: ['_api/api.js', '_template/**/*.html', '_illustrations/**/*.svg'],
@@ -34,10 +38,20 @@ module.exports = function(grunt) {
     },
     scsslint: {
       allFiles: [
-        '_template/**/*.scss'
+        '_template/scss/**/*.scss'
       ],
       options: {
         config: '_template/scss/.scss-lint.yml'
+      }
+    },
+    requirejs: {
+      compile: {
+        options: {
+          baseUrl: '_template/js',
+          name: 'main',
+          out: 'main.js',
+          findNestedDependencies: true
+        }
       }
     },
     shell: {
@@ -67,9 +81,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-scss-lint');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
   // Default task.
-  grunt.registerTask('default', ['shell:api', 'sass', 'scsslint', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['shell:api', 'sass', 'scsslint', 'requirejs', 'browserSync', 'watch']);
   
   // Init task
   grunt.registerTask('init', ['shell:index', 'shell:api', 'sass']);
