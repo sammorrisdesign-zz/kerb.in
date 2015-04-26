@@ -40,6 +40,7 @@ define([
             }
             this.showMenu(qwery('.menu__list--' + target));
             this.checkToDisable(target);
+            this.updateDate();
         },
 
         showMenu: function(target) {
@@ -58,6 +59,11 @@ define([
         
         checkIfDisabled: function(e) {
             return bonzo(qwery(e.target)[0]).hasClass('is-disabled');
+        },
+
+        updateDate: function() {
+            var date = bonzo(qwery('.is-visible')[0]).attr('data-date');
+            bonzo(qwery('.js-toggle-date')[0]).html(date);
         }
     }
 });

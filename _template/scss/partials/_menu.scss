@@ -99,6 +99,8 @@
 }
 
 .toggle {
+    cursor: pointer;
+
     &.is-disabled {
         opacity: .5;
     }
