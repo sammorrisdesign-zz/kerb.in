@@ -16,19 +16,19 @@
             top: 58%;
         }
     }
+}
 
-    &:after {
-        position: absolute;
-        top: -50%;
-        bottom: 42%;
-        right: 0;
-        left: 0;
-        background-repeat: repeat-x;
-        background-position: center bottom;
-        background-size: 1300px;
-        content: "";
-        opacity: .1;
-    }
+.menu__skyline {
+    position: absolute;
+    top: -50%;
+    bottom: 42%;
+    right: 0;
+    left: 0;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    background-size: 1300px;
+    content: "";
+    opacity: .1;
 }
 
 .menu__date {

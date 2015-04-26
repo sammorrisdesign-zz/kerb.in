@@ -1,7 +1,10 @@
 require([
-    'modules/menuToggler'
+    'modules/menuToggler',
+    'modules/menuParallax'
 ], function (
-    menuToggler
+    menuToggler,
+    menuParallax
 ) {
     menuToggler.init();
+    menuParallax.init();
 });

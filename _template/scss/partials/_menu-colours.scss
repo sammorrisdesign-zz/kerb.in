@@ -41,7 +41,7 @@
 .market--kings-cross {
     @include menu-colour($light-kings-cross, $kings-cross);
 
-    .menu:after {
+    .menu__skyline {
         background-image: url("assets/kings-cross.png");
     }
 }
