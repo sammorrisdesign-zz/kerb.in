@@ -57,7 +57,7 @@ define([
                 bonzo(qwery('.js-toggle-next')[0]).addClass('is-disabled');
             }
         },
-        
+
         checkIfDisabled: function(direction) {
             return bonzo(qwery('.js-toggle-' + direction)[0]).hasClass('is-disabled');
         },
