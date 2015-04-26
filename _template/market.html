@@ -19,27 +19,23 @@
     <header>
         <div class="container">
             <h1 class="title"><a href="{{url}}">Kerb<span class="title__period">.</span>In</a><br /> {{marketName}}</h1>
-            {{#date-0}}
             <h3 class="sub-title">Lineup for {{date}}</h3>
         </div>
     </header>
     <main class="menu">
         <div class="menu__wrapper">
-            {{#isToday}}
             <ul class="menu__list">
-            {{#traders}}
-                <li class="menu__list__trader">
-                    <img src="{{illustration}}" class="illustration" />
-                    <h2 class="title">{{standName}}</h2>
-                    <span class="sub-title">{{description}}</span>
-                </li>
-            {{/traders}}
+            {{#markets}}
+                {{#traders}}
+                    <li class="menu__list__trader">
+                        <img src="{{illustration}}" class="illustration" />
+                        <h2 class="title">{{standName}}</h2>
+                        <span class="sub-title">{{description}}</span>
+                    </li>
+                {{/traders}}
+            {{/markets}}
             </ul>
-            {{/isToday}}
-            {{^isToday}}
-            <h3 class="menu__closed title">isn't on today</h3>
-            {{/isToday}}
-        {{/date-0}}
+<!--             <h3 class="menu__closed title">isn't on today</h3> -->
         </div>
     </main>
 

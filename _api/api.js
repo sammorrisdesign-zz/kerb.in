@@ -26,22 +26,22 @@ sources["markets"].forEach(function(source) {
     "uri": source["uri"]
     }, function(err, resp, body){
         var $ = cheerio.load(body);
-    
+
         // Create Structure for data
         var output = {};
         output["lastUpdated"] = new Date();
         output["url"] = url;
         output["marketName"] = $(".col_left h3:first-of-type").text();
+        output["markets"] = [];
 
         // Target panel on Kerb website
         $(".rota_panel > ul > li").each(function(index) {
-            index = "date-" + index;
-            output[index] = {};
-            output[index]["traders"] = [];
-            output[index]["date"] = $(this).attr("rel");
-            output[index]["timestamp"] = $(this).attr("id").replace("date-", "");
+            market = {};
+            market["traders"] = [];
+            market["date"] = $(this).attr("rel");
+            market["timestamp"] = $(this).attr("id").replace("date-", "");
             var numOfTraders = $(this).find("ul li").length;
-    
+
             $(this).find("ul li").each(function(subIndex) {
                 var handle = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", "");
                 var trader = {};
@@ -62,15 +62,18 @@ sources["markets"].forEach(function(source) {
                 if (numOfTraders - 1 == subIndex) {
                     trader["last"] = true;
                 }
-                output[index]["traders"].push(trader);
+                market["traders"].push(trader);
             });
+            output["markets"].push(market);
 
+/*
             var today = output["lastUpdated"].getFullYear() + "-" + ('0' + (output["lastUpdated"].getMonth()+1)).slice(-2) + "-" + ('0' + output["lastUpdated"].getDate()).slice(-2);
             if (output[index]["timestamp"] == today || forceToday === true && index === "date-0") {
                 output[index]["isToday"] = true;
             } else {
                 output[index]["isToday"] = false;
             }
+*/
         });
 
         // Create Folder
