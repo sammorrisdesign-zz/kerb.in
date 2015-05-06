@@ -36,7 +36,7 @@ sources["markets"].forEach(function(source) {
         output["marketHandle"] = source["handle"];
         output["isClosed"] = true;
         output["markets"] = [];
-        
+
         // Add Today's Date
         function suffixOf(i) {
             var j = i % 10,
@@ -68,6 +68,7 @@ sources["markets"].forEach(function(source) {
             market["traders"] = [];
             market["date"] = $(this).attr("rel");
             market["timestamp"] = $(this).attr("id").replace("date-", "");
+;
             var numOfTraders = $(this).find("ul li").length;
 
             // Loop through each trader
@@ -105,7 +106,7 @@ sources["markets"].forEach(function(source) {
             }
         });
 
-        if(output.markets[0].date == today) {
+        if(output.markets.length > 0 && output.markets[0].date == today) {
             output["isClosed"] = false;
         }
 
