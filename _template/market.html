@@ -24,14 +24,16 @@
                     <svg class="toggle__arrow" viewBox="0 0 14.85 24.04"><path d="M12.02 9.19L2.83 0 0 2.83l9.19 9.19L0 21.21l2.83 2.83 9.19-9.19 2.83-2.83z"/></svg>
                     <span class="toggle__label">Prev Day</span>
                 </div>
-                <ul class="toggle__dates js-toggle-dates">
-                    {{#if isClosed}}
-                    <li class="toggle__date toggle__date---1">{{todaysDate}}</li>
-                    {{/if}}
-                    {{#markets}}
-                    <li class="toggle__date toggle__date--{{@index}}">{{date}}</li>
-                    {{/markets}}
-                </ul>
+                <div class="toggle__dates-container">
+                    <ul class="toggle__dates js-toggle-dates">
+                        {{#if isClosed}}
+                        <li class="toggle__date toggle__date---1">{{todaysDate}}</li>
+                        {{/if}}
+                        {{#markets}}
+                        <li class="toggle__date toggle__date--{{@index}}">{{date}}</li>
+                        {{/markets}}
+                    </ul>
+                </div>
                 <div class="toggle toggle--next js-toggle-next">
                     <span class="toggle__label">Next Day</span>
                     <svg class="toggle__arrow" viewBox="0 0 14.85 24.04"><path d="M12.02 9.19L2.83 0 0 2.83l9.19 9.19L0 21.21l2.83 2.83 9.19-9.19 2.83-2.83z"/></svg></div>

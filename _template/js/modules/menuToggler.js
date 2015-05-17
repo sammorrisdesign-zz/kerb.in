@@ -60,6 +60,12 @@ define([
                 bonzo(qwery(namespace + '.is-visible')).removeClass('is-visible');
                 bonzo(qwery(namespace + '--' + target)).addClass('is-visible');
             });
+            var numOfDates = bonzo(qwery('.toggle__date')).length;
+            for (i = 0; i < numOfDates; i++) {
+                if (bonzo(qwery('.toggle__date')[i]).hasClass('is-visible')) {
+                    bonzo(qwery('.toggle__dates')).attr('style', 'top: -' + (i - 1) + '.5em;');
+                }
+            }
         },
 
         checkToDisable: function(current) {
