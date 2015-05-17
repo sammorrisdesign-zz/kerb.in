@@ -115,12 +115,50 @@
     }
 }
 
+.toggle-container {
+    width: 400px;
+    margin: 0 auto;
+}
+
 .toggle {
     position: relative;
     z-index: 5;
     cursor: pointer;
 
+    &:not(.is-disabled):hover {
+        text-decoration: underline;
+    }
+
     &.is-disabled {
         opacity: .5;
+        cursor: default;
     }
+
+    &.toggle--prev {
+        float: left;
+
+        .toggle__arrow {
+            left: -18px;
+            transform: rotate(180deg);
+        }
+    }
+
+    &.toggle--next {
+        float: right;
+
+        .toggle__arrow {
+            right: -18px;
+        }
+    }
+}
+
+.toggle__date {
+    color: $black;
+}
+
+.toggle__arrow {
+    position: absolute;
+    top: 0;
+    width: 12px;
+    height: 20px;
 }

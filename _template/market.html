@@ -19,10 +19,11 @@
     <header>
         <div class="container">
             <h1 class="title"><a href="{{url}}">Kerb<span class="title__period">.</span>In</a><br /> {{marketName}}</h1>
-            <h3 class="sub-title">
-                <span class="toggle toggle--prev js-toggle-prev is-disabled"><</span>
+            <div class="sub-title toggle-container">
+                <div class="toggle toggle--prev js-toggle-prev is-disabled"><svg class="toggle__arrow" viewBox="0 0 14.85 24.04"><path d="M12.02 9.19L2.83 0 0 2.83l9.19 9.19L0 21.21l2.83 2.83 9.19-9.19 2.83-2.83z"/></svg> Prev Day</div>
                 <span class="toggle__date js-toggle-date">{{todaysDate}}</span>
-                <span class="toggle toggle--next js-toggle-next">></span></h3>
+                <div class="toggle toggle--next js-toggle-next">Next Day <svg class="toggle__arrow" viewBox="0 0 14.85 24.04"><path d="M12.02 9.19L2.83 0 0 2.83l9.19 9.19L0 21.21l2.83 2.83 9.19-9.19 2.83-2.83z"/></svg></div>
+            </div>
         </div>
     </header>
     <main class="menu">

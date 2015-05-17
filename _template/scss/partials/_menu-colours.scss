@@ -15,6 +15,18 @@
         color: $dark;
     }
 
+    .toggle:not(.is-disabled):hover {
+        color: darken($dark, 15%);
+
+        .toggle__arrow {
+            fill: darken($dark, 15%);
+        }
+    }
+
+    .toggle__arrow {
+        fill: $dark;
+    }
+
     .menu {
         &:before {
             background-color: $light;
