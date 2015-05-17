@@ -125,6 +125,11 @@
     position: relative;
     z-index: 5;
     cursor: pointer;
+    display: none;
+
+    .market--has-dates & {
+        display: block;
+    }
 
     &:not(.is-disabled):hover {
         text-decoration: underline;

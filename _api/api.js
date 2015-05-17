@@ -36,6 +36,7 @@ sources["markets"].forEach(function(source) {
         output["marketHandle"] = source["handle"];
         output["isClosed"] = true;
         output["hasDates"] = true;
+        output['markets'] = [];
 
         // Add Today's Date
         function suffixOf(i) {
@@ -102,12 +103,14 @@ sources["markets"].forEach(function(source) {
             });
 
             if (market.traders.length > 0) {
-                output['markets'] = [];
                 output['markets'].push(market);
             }
         });
 
-        if (typeof output.markets !== 'undefined' && output.markets[0].date == today) {
+        if (output.markets.length == 0) {
+            delete output.markets;
+            output.hasDates = false;
+        } else if (output.markets.length > 0 && output.markets[0].date == today) {
             output["isClosed"] = false;
         }
 

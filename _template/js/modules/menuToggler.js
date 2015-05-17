@@ -11,7 +11,9 @@ define([
 ) {
     return {
         init: function() {
-            this.bindEvents();
+            if(bonzo(qwery("body")).hasClass("market--has-dates")) {
+                this.bindEvents();
+            }
             this.showMenu(qwery('.menu__list')[0]);
         },
 

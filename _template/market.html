@@ -15,7 +15,7 @@
     <script type="text/javascript" src="//use.typekit.net/hpa3kru.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body class="market--{{marketHandle}}">
+<body class="market--{{marketHandle}}{{#if hasDates}} market--has-dates{{/if}}">
     <header>
         <div class="container">
             <h1 class="title"><a href="{{url}}">Kerb<span class="title__period">.</span>In</a><br /> {{marketName}}</h1>
