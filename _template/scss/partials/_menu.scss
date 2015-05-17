@@ -116,8 +116,9 @@
 }
 
 .toggle-container {
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .toggle {
@@ -159,6 +160,17 @@
 .toggle__arrow {
     position: absolute;
     top: 0;
+    bottom: 0;
     width: 12px;
     height: 20px;
+
+    @include mq($until: tablet) {
+        top: -3px;
+    }
+}
+
+.toggle__label {
+    @include mq($until: tablet) {
+        display: none;
+    }
 }
