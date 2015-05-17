@@ -1,6 +1,8 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  var env = grunt.option('env');
+
   // Project configuration.
   grunt.initConfig({
     // Metadata.
@@ -20,9 +22,13 @@ module.exports = function(grunt) {
         files: '_template/js/**/*.js',
         tasks: ['requirejs']
       },
-      node: {
+      api: {
         files: ['_api/api.js', '_template/**/*.html', '_illustrations/**/*.svg'],
         tasks: ['shell:api']
+      },
+      index: {
+        files: ['_api/market.js', '_api/home.js', '_template/home.html'],
+        tasks: ['shell:index']
       }
     },
     sass: {
@@ -57,10 +63,10 @@ module.exports = function(grunt) {
     },
     shell: {
       api: {
-        command: ['cd _api', 'node api.js'].join('&&')
+        command: ['cd _api', 'ENV=' + env + ' node api.js'].join('&&')
       },
       index: {
-        command: ['cd _api', 'node markets.js', 'node home.js'].join('&&')
+        command: ['cd _api', 'ENV=' + env + ' node markets.js', 'node home.js'].join('&&')
       }
     },
     browserSync: {
@@ -86,8 +92,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task.
-  grunt.registerTask('default', ['shell:api', 'sass', 'scsslint', 'autoprefixer', 'requirejs', 'browserSync', 'watch']);
-  
-  // Init task
-  grunt.registerTask('init', ['shell:index', 'shell:api', 'sass', 'autoprefixer']);
+  grunt.registerTask('default', ['shell:api', 'shell:index', 'sass', 'scsslint', 'autoprefixer', 'requirejs', 'browserSync', 'watch']);
 };

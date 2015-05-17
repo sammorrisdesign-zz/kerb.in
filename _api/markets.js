@@ -7,7 +7,11 @@ var fs = require("fs");
 var source = "http://www.kerbfood.com/kings-cross/";
 
 // Options
-var url = "http://www.kerb.in";
+if (process.env.ENV == "local") {
+    var url = "http://localhost:3000";
+} else {
+    var url = "http://www.kerb.in";
+}
 
 request({
 "uri": source

@@ -19,7 +19,11 @@ var sources = require("./markets.json");
 // Options
 var jsonExport = true;
 var forceToday = false; // This allows for development when working on non-Kerb days
-var url = "http://www.kerb.in";
+if (process.env.ENV == "local") {
+    var url = "http://localhost:3000";
+} else {
+    var url = "http://www.kerb.in";
+}
 
 sources["markets"].forEach(function(source) {
     request({
