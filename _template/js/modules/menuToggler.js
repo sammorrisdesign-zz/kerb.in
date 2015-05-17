@@ -9,12 +9,19 @@ define([
     keypress,
     qwery
 ) {
+    var options = {
+        showMenu: [
+            '.toggle__date', '.menu__list'
+        ]
+    }
+
     return {
         init: function() {
             if(bonzo(qwery("body")).hasClass("market--has-dates")) {
                 this.bindEvents();
             }
-            this.showMenu(qwery('.menu__list')[0]);
+            var first = bonzo(qwery(".toggle__date")).first()[0].className.split(' ')[1].replace('toggle__date--', '');
+            this.showMenu(first);
         },
 
         bindEvents: function() {
@@ -34,13 +41,13 @@ define([
 
         switchMenu: function(direction) {
             if (!this.checkIfDisabled(direction)) {
-                var current = parseInt(qwery('.is-visible')[0].className.split(' ')[1].replace('menu__list--', ''));
+                var current = parseInt(qwery('.toggle__date.is-visible')[0].className.split(' ')[1].replace('toggle__date--', ''));
                 if (direction == 'next') {
                     target = current + 1;
                 } else if (direction == 'prev') {
                     target = current - 1;
                 }
-                this.showMenu(qwery('.menu__list--' + target));
+                this.showMenu(target);
                 this.randomTransition();
                 this.checkToDisable(target);
                 this.updateDate();
@@ -49,8 +56,10 @@ define([
         },
 
         showMenu: function(target) {
-            bonzo(qwery('.is-visible')).removeClass('is-visible');
-            bonzo(target).addClass('is-visible');
+            options.showMenu.forEach(function(namespace) {
+                bonzo(qwery(namespace + '.is-visible')).removeClass('is-visible');
+                bonzo(qwery(namespace + '--' + target)).addClass('is-visible');
+            });
         },
 
         checkToDisable: function(current) {

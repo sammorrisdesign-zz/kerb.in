@@ -158,8 +158,20 @@
     }
 }
 
+.toggle__dates {
+    position: relative;
+}
+
 .toggle__date {
     color: $black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+
+    &.is-visible {
+        display: block;
+    }
 }
 
 .toggle__arrow {
