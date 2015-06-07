@@ -58,10 +58,6 @@
 
 .market--kings-cross {
     @include menu-colour($light-kings-cross, $kings-cross, kings-cross);
-
-    .menu__skyline {
-        background-image: url("assets/kings-cross.png");
-    }
 }
 
 .market--spitalfields {
