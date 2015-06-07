@@ -3,7 +3,7 @@
     background-color: $white;
 
     @include mq(tablet) {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     &:before {
@@ -33,6 +33,7 @@
     background-size: 1300px;
     content: "";
     opacity: .1;
+    animation: background .2s ease-out;
 }
 
 .menu__date {
