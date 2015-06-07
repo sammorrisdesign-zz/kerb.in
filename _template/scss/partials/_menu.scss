@@ -2,6 +2,10 @@
     position: relative;
     background-color: $white;
 
+    @include mq(tablet) {
+        padding-top: 100px;
+    }
+
     &:before {
         position: absolute;
         top: 53%;

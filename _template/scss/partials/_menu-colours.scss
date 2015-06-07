@@ -1,4 +1,4 @@
-@mixin menu-colour($light, $dark) {
+@mixin menu-colour($light, $dark, $has-background: false) {
     @at-root {
         body#{&} {
             background-color: $dark;
@@ -37,6 +37,12 @@
         color: $dark;
     }
 
+    @if ($has-background) {
+        .menu__skyline {
+            background-image: url("assets/#{$has-background}.png");
+        }
+    }
+
     footer {
         background-color: $dark;
 
@@ -47,11 +53,11 @@
 }
 
 .market--gherkin {
-    @include menu-colour($light-gherkin, $gherkin);
+    @include menu-colour($light-gherkin, $gherkin, gherkin);
 }
 
 .market--kings-cross {
-    @include menu-colour($light-kings-cross, $kings-cross);
+    @include menu-colour($light-kings-cross, $kings-cross, kings-cross);
 
     .menu__skyline {
         background-image: url("assets/kings-cross.png");
@@ -63,7 +69,7 @@
 }
 
 .market--paddington {
-    @include menu-colour($light-paddington, $paddington);
+    @include menu-colour($light-paddington, $paddington, paddington);
 }
 
 .market--uclu-monthly- {
