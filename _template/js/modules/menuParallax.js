@@ -18,24 +18,19 @@ define([
 
         bindEvents: function() {
             bean.on(qwery('.menu__wrapper')[0], 'scroll', function(e) {
-                this.positionCalc();
                 this.parallaxBackground();
             }.bind(this));
         },
 
         positionCalc: function() {
             var currentScroll = bonzo(qwery('.menu__wrapper')[0]).scrollLeft();
-            if (currentScroll > lastScroll) {
-                position = position - 1;
-            } else {
-                position = position + 1;
-            }
-            lastScroll = currentScroll;
+            position = 0 - (currentScroll / 2);
+            return position;
         },
 
         parallaxBackground: function() {
             bonzo(qwery('.menu__skyline')[0]).css({
-                'background-position-x' : position + "px"
+                'background-position-x' : this.positionCalc() + "px"
             });
         }
     }
