@@ -61,7 +61,7 @@
 }
 
 .market--spitalfields {
-    @include menu-colour($light-spitalfields, $spitalfields);
+    @include menu-colour($light-spitalfields, $spitalfields, spitalfields);
 }
 
 .market--paddington {

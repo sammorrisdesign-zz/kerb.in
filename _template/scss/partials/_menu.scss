@@ -3,7 +3,7 @@
     background-color: $white;
 
     @include mq(tablet) {
-        padding-top: 80px;
+        padding-top: 140px;
     }
 
     &:before {
@@ -17,7 +17,7 @@
         z-index: 2;
 
         @include mq(tablet) {
-            top: 58%;
+            top: 65%;
         }
     }
 }
@@ -25,12 +25,12 @@
 .menu__skyline {
     position: absolute;
     top: -50%;
-    bottom: 42%;
+    bottom: 35%;
     right: 0;
     left: 0;
     background-repeat: repeat-x;
     background-position: 0 bottom;
-    background-size: 1300px;
+    background-size: 2000px;
     content: "";
     opacity: .1;
     animation: background .2s ease-out;
