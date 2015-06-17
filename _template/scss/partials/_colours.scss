@@ -1,0 +1,75 @@
+@mixin menu-colour($market, $light, $dark, $has-background: false) {
+    .market-list__item--#{$market} {
+        a:hover {
+            color: $dark;
+        }
+    }
+
+    .market--#{$market} {
+        @at-root {
+            body#{&} {
+                background-color: $dark;
+            }
+        }
+    
+        .title {
+            .title__period {
+                color: $dark;
+            }
+
+            a:hover {
+                color: $dark;
+
+                .title__period {
+                    color: $black;
+                }
+            }
+        }
+    
+        .sub-title {
+            color: $dark;
+        }
+    
+        .toggle:not(.is-disabled):hover {
+            color: darken($dark, 15%);
+    
+            .toggle__arrow {
+                fill: darken($dark, 15%);
+            }
+        }
+    
+        .toggle__arrow {
+            fill: $dark;
+        }
+    
+        .menu {
+            &:before {
+                background-color: $light;
+            }
+        }
+    
+        .menu-date {
+            color: $dark;
+        }
+    
+        @if ($has-background) {
+            .menu__skyline {
+                background-image: url("assets/#{$has-background}.png");
+            }
+        }
+    
+        footer {
+            background-color: $dark;
+    
+            a {
+                color: $light;
+            }
+        }
+    }
+}
+
+@include menu-colour(gherkin, $light-gherkin, $gherkin, gherkin);
+@include menu-colour(kings-cross, $light-kings-cross, $kings-cross, kings-cross);
+@include menu-colour(spitalfields, $light-spitalfields, $spitalfields, spitalfields);
+@include menu-colour(paddington, $light-paddington, $paddington, paddington);
+@include menu-colour(uclu-monthly-, $light-uclu, $uclu);

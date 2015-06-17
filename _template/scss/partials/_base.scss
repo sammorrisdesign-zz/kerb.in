@@ -23,7 +23,7 @@ a {
     color: $black;
 
     &:hover {
-        text-decoration: underline;
+        color: $default;
     }
 }
 
@@ -41,6 +41,10 @@ a {
 
     .title__period {
         color: $default;
+    }
+
+    &:hover .title__period {
+        color: $black;
     }
 }
 

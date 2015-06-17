@@ -183,7 +183,11 @@
     }
 
     &:not(.is-disabled):hover {
-        text-decoration: underline;
+        color: darken($default, 15%);
+
+        .toggle__arrow {
+            fill: darken($default, 15%);
+        }
     }
 
     &.is-disabled {
