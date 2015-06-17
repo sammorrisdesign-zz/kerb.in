@@ -1,5 +1,6 @@
 .home {
-    padding: 20px 0;
+    position: relative;
+    padding: 20px 0 230px;
     background-color: $white;
 }
 
@@ -8,6 +9,9 @@
 }
 
 .market-list {
+    position: relative;
+    z-index: 5;
+
     .market-list__item {
         padding: 6px 0;
         font-size: 2.4rem;
@@ -15,5 +19,75 @@
         @include mq(tablet) {
             font-size: 3.6rem;
         }
+    }
+}
+
+@keyframes drive {
+    0% {
+        left: -150%;
+    }
+
+    100% {
+        left: 250%;
+    }
+}
+
+@keyframes wheel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.home__vans {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 265px;
+}
+
+.van {
+    position: absolute;
+    bottom: -102px;
+    transform: scale(.5);
+    animation: drive 12s ease-in-out infinite;
+
+    &:nth-of-type(1) {
+        animation-delay: -10s;
+    }
+
+    &:nth-of-type(2) {
+        animation-delay: -14s;
+    }
+
+    &:nth-of-type(3) {
+        animation-delay: -16s;
+    }
+
+    &:nth-of-type(4) {
+        animation-delay: -19s;
+    }
+
+    &:nth-of-type(5) {
+        animation-delay: -16s;
+    }
+
+    .wheel {
+        transform-origin: 50% 50%;
+        animation: wheel 1s linear infinite;
+    }
+}
+
+.van--luardos,
+.van--hanoi-kitchen,
+.van--motoyogo, {
+    animation-direction: reverse;
+
+    .wheel {
+        animation-direction: reverse;
     }
 }

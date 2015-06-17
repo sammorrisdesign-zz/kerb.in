@@ -28,6 +28,11 @@
             <li class="market-list__item market-list__item--{{handle}} title"><a href="{{localUrl}}">{{name}}</a></li>
             {{/markets}}
         </ul>
+        <ul class="home__vans">
+            {{#vans}}
+            <li class="van van--{{name}}">{{{illustration}}}</li>
+            {{/vans}}
+        </ul>
     </main>
 
     {{> footer}}

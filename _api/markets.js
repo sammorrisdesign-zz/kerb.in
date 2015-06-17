@@ -7,6 +7,7 @@ var fs = require("fs");
 var source = "http://www.kerbfood.com/kings-cross/";
 
 // Options
+var vans = ["luardos", "hanoi-kitchen", "yu-kyu", "the-grilling-greek", "motoyogo"];
 if (process.env.ENV == "local") {
     var url = "http://localhost:3000";
 } else {
@@ -19,6 +20,7 @@ request({
     var $ = cheerio.load(body);
     var output = {};
     output["markets"] = [];
+    output["vans"] = [];
     output["url"] = url;
 
     // Target panel on Kerb website
@@ -33,14 +35,26 @@ request({
         }
     });
 
-    // Output file
-    fs.writeFile("markets.json", JSON.stringify(output), function(err) {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log("Json Written");
-        }
+    // Get van illustrations
+    $(vans).each(function(index, value) {
+        var van = {};
+        van["name"] = value;
+        fs.readFile('../_illustrations/' + value + '.svg', 'utf8', function(err, data) {
+            van["illustration"] = data;
+            output["vans"].push(van);
+            if (index == vans.length -1) {
+                fs.writeFile("markets.json", JSON.stringify(output), function(err) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log("Json Written");
+                    }
+                });
+            }
+        });
+
     });
+
 });
 
 var port = process.env.PORT || 5000;
