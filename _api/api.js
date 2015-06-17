@@ -111,9 +111,12 @@ sources["markets"].forEach(function(source) {
             }
         });
 
+        if (output.markets.length < 2) {
+            output.hasDates = false;
+        }
+
         if (output.markets.length == 0) {
             delete output.markets;
-            output.hasDates = false;
         } else if (output.markets.length > 0 && output.markets[0].date == today) {
             output["isClosed"] = false;
         }
