@@ -244,6 +244,7 @@
     bottom: 0;
     width: 12px;
     height: 20px;
+    fill: $default;
 
     @include mq($until: tablet) {
         top: -3px;
