@@ -53,7 +53,7 @@
         }
     
         @if ($has-background) {
-            .menu__skyline {
+            .skyline {
                 background-image: url("assets/#{$has-background}.png");
             }
         }
