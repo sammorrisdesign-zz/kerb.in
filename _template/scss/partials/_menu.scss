@@ -10,7 +10,6 @@
 
 .skyline {
     position: absolute;
-    z-index: 3;
     top: -50%;
     bottom: 35%;
     right: 0;
@@ -100,7 +99,7 @@
     padding-top: 58px;
     animation-delay: 200ms;
     animation: fade .5s forwards;
-    max-width: 250px;
+    width: 250px;
 
     @include mq(tablet) {
         max-width: 340px;
