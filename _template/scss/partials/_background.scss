@@ -6,6 +6,10 @@
     bottom: 0;
     opacity: .2;
     overflow: hidden;
+
+    @include mq($until: tablet) {
+        display: none;
+    }
 }
 
 @keyframes clouds {
