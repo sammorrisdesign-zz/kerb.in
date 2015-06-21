@@ -5,21 +5,6 @@
     @include mq(tablet) {
         padding-top: 140px;
     }
-
-    &:before {
-        position: absolute;
-        top: 53%;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: $light-default;
-        content: "";
-        z-index: 2;
-
-        @include mq(tablet) {
-            top: 65%;
-        }
-    }
 }
 
 .menu__skyline {

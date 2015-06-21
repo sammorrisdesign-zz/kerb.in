@@ -2,6 +2,10 @@
     position: relative;
     padding: 20px 0 230px;
     background-color: $white;
+
+    &:before {
+        top: 90%;
+    }
 }
 
 .home__header {
@@ -44,7 +48,8 @@
 
 .home__vans {
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
+    z-index: 5;
     width: 100%;
     overflow: hidden;
     height: 265px;
@@ -79,6 +84,10 @@
     .wheel {
         transform-origin: 50% 50%;
         animation: wheel 1s linear infinite;
+    }
+
+    .menu {
+        display: none;
     }
 }
 
