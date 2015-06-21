@@ -5,6 +5,9 @@ require([
     menuToggler,
     menuParallax
 ) {
-    menuToggler.init();
-    menuParallax.init();
+    var bootstrap = document.body.getAttribute('data-bootstrap');
+    if (bootstrap === "menu") {
+        menuToggler.init();
+        menuParallax.init();
+    }
 });

@@ -12,7 +12,6 @@ define([
 
     return {
         init: function() {
-            $wrapper = qwery('.menu__wrapper')[0];
             this.bindEvents();
         },
 
