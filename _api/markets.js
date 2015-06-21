@@ -8,6 +8,7 @@ var source = "http://www.kerbfood.com/kings-cross/";
 
 // Options
 var vans = ["luardos", "hanoi-kitchen", "yu-kyu", "the-grilling-greek", "motoyogo"];
+var whiteList = ["kerb-on-the-quay", "gherkin", "kings-cross", "spitalfields", "paddington", "uclu-monthly-"];
 if (process.env.ENV == "local") {
     var url = "http://localhost:3000";
 } else {
@@ -30,7 +31,7 @@ request({
         market["handle"] = $(this).find("a").attr("href").replace(/\//g, "");
         market["uri"] = "http://www.kerbfood.com" + $(this).find("a").attr("href");
         market["localUrl"] = url + $(this).find("a").attr("href");
-        if (market["handle"] !== "kerb-does-alchemy") {
+        if (whiteList.indexOf(market["handle"]) > -1) {
             output["markets"].push(market);
         }
     });
