@@ -7,11 +7,17 @@ require([
     fonts.init();
 
     var bootstrap = document.body.getAttribute('data-bootstrap');
-    bootstrap = "home";
 
     if (bootstrap === "menu") {
         require(['menu'], function(Menu) {
+            console.log(Menu);
             Menu.init();
+        });
+    }
+
+    if (bootstrap === "home") {
+        require(['home'], function(Home) {
+            Home.init();
         });
     }
 });

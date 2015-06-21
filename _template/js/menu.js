@@ -1,13 +1,14 @@
-require([
+define([
     'modules/menuToggler',
     'modules/menuParallax'
 ], function (
     menuToggler,
     menuParallax
 ) {
-    var bootstrap = document.body.getAttribute('data-bootstrap');
-    if (bootstrap === "menu") {
-        menuToggler.init();
-        menuParallax.init();
+    return {
+        init: function() {
+            menuToggler.init();
+            menuParallax.init();
+        }
     }
 });
