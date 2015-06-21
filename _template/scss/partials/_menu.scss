@@ -154,14 +154,14 @@
 }
 
 .menu__closed {
-    padding-bottom: 20px;
-    font-size: 2.6rem;
+    padding-top: 70px;
     animation-delay: 200ms;
     animation: fade .5s forwards;
+    max-width: 250px;
 
     @include mq(tablet) {
-        padding: 40px 20px;
-        font-size: 3.2rem;
+        max-width: 340px;
+        padding: 60px 20px;
     }
 }
 
