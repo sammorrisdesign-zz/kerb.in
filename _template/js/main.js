@@ -10,7 +10,6 @@ require([
 
     if (bootstrap === "menu") {
         require(['menu'], function(Menu) {
-            console.log(Menu);
             Menu.init();
         });
     }
