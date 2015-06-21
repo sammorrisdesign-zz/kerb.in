@@ -9,11 +9,11 @@
 
 @keyframes clouds {
     from {
-        background-position-x: -10%;
+        transform: translate3d(-10%, 0, 0);
     }
 
     to {
-        background-position: 110%;
+        transform: translate3d(110%, 0, 0);
     }
 }
 
