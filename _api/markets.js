@@ -7,7 +7,7 @@ var fs = require("fs");
 var source = "http://www.kerbfood.com/kings-cross/";
 
 // Options
-var vans = ["luardos", "hanoi-kitchen", "yu-kyu", "the-grilling-greek", "motoyogo"];
+var vans = ["luardos", "hanoi-kitchen", "yu-kyu", "the-grilling-greek", "motoyogo", "baba-g-s", "bbq-lab", "kimchinary", "rainbo", "spit-roast", "well-kneaded"];
 var whiteList = ["kerb-on-the-quay", "gherkin", "kings-cross", "spitalfields", "paddington", "uclu-monthly-"];
 if (process.env.ENV == "local") {
     var url = "http://localhost:3000";
