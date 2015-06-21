@@ -119,6 +119,11 @@
     position: relative;
     z-index: 5;
     cursor: pointer;
+    display: none;
+
+    .market--has-dates & {
+        display: block;
+    }
 
     &:not(.is-disabled):hover {
         color: darken($default, 15%);
@@ -129,7 +134,7 @@
     }
 
     &.is-disabled {
-        opacity: .5;
+        opacity: .2;
         cursor: default;
     }
 
