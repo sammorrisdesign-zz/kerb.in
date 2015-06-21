@@ -1,68 +1,266 @@
 {
-    "7-bridges-deli" : "Pastrami Sandwiches",
-    "allihopa" : "Smoked Trout Sandwiches",
-    "anna-mae-s" : "Mac and Cheese",
-    "ambriento" : "Tacos",
-    "baba-g-s" : "Indian Fusion",
-    "batch-bakery" : "Brownies",
-    "bbq-lab" : "Experimental BBQ",
-    "bbq-dreamz" : "Filipino BBQ",
-    "bian-dang" : "Taiwanese Lunch Boxes",
-    "big-apple-hot-dogs" : "Hot Dogs",
-    "bill-or-beak" : "Chicken or Duck Baps",
-    "bell-brisket" : "Salt Beef Bagels",
-    "block-b" : "Falafel Wraps",
-    "born-raised" : "Wood-Fired Pizzas",
-    "capish" : "Meatball Subs",
-    "cast-iron-kitchen" : "Steak Rolls",
-    "claw" : "Crab Based Food",
-    "club-mexicana" : "Jackfruit Tacos",
-    "crabbieshack" : "Crab Burgers",
-    "chef-de-poutine" : "Poutine",
-    "decatur" : "New Oreleans Desserts",
-    "donostia-social-club" : "Basque Sandwiches & Tapas",
-    "dosa-deli" : "Vegetarian Indian Street Food",
-    "engine-hot-dogs" : "Hot Dogs",
-    "fleisch-mob" : "Austrian Street Food",
-    "fundi-pizza" : "Wood Fired Pizzas",
-    "kimchinary" : "Korean Burritos",
-    "kooky-bakes" : "Cakes",
-    "kothu-kothu" : "Sri Lankan Kothu",
-    "hank-s" : "Po-Boys",
-    "hanoi-kitchen" : "Vietnamese Noodles",
-    "jaffrey" : "Vegetarian Indian Food",
-    "jamon-jamon" : "Paella",
-    "le-swine" : "Bacon Butties",
-    "london-laksa-co" : "Laksa Noodle Soup",
-    "luardos" : "Burritos",
-    "good-proper-tea" : "Tea",
-    "mama-wang-s" : "Hand-pulled Noodles",
-    "mike-ollie" : "Flatbread Wraps",
-    "miss-p-s-barbecue" : "Pulled Pork & Beef Brisket",
-    "motoyogo" : "Frozen Yogurt",
-    "mother-flipper" : "Burgers",
-    "my-pie" : "Pie and Mash",
-    "noble-espresso" : "Coffee",
-    "oli-baba-s" : "Hummus",
-    "rainbo" : "Gyoza Dumplings",
-    "r-la-wala" : "Naan Wraps",
-    "the-beefsteaks" : "Steak & Chips",
-    "the-bowler" : "Meatballs",
-    "the-grilling-greek" : "Greek Wraps & Sides",
-    "the-roadery" : "Best of British",
-    "tongue-n-cheek" : "Underrated Cuts",
-    "saltwood-fish-bar" : "Fish and Chips",
-    "speck-mobile" : "Austrian Food",
-    "suzette" : "Galettes",
-    "sorbitium-ices" : "Ice Cream",
-    "spit-roast" : "Buttermilk Chicken",
-    "stakehaus" : "Steak and Chips",
-    "vinn-goute" : "Seychellois Wraps",
-    "wild-game-co" : "Gamey Meat",
-    "well-kneaded" : "Firebread Pizza",
-    "what-the-dickens" : "Traditional British Food",
-    "yolk" : "Egg Based Food",
-    "yu-kyu" : "Katsu",
-    "yum-bun" : "Steamed Buns",
-    "yum-jungle" : "Spicy Asian Food"
+    "7-bridges-deli" : {
+        "description"   : "Pastrami Sandwiches",
+        "twitter"       : "url here"
+    },
+    "allihopa" : {
+        "description"   : "Smoked Trout Sandwiches",
+        "twitter"       : "url here"
+    },
+    "anna-mae-s" : {
+        "description"   : "Mac and Cheese",
+        "twitter"       : "url here"
+    },
+    "ambriento" : {
+        "description"   : "Tacos",
+        "twitter"       : "url here"
+    },
+    "baba-g-s" : {
+        "description"   : "Indian Fusion",
+        "twitter"       : "url here"
+    },
+    "batch-bakery" : {
+        "description"   : "Brownies",
+        "twitter"       : "url here"
+    },
+    "bbq-lab" : {
+        "description"   : "Experimental BBQ",
+        "twitter"       : "url here"
+    },
+    "bbq-dreamz" : {
+        "description"   : "Filipino BBQ",
+        "twitter"       : "url here"
+    },
+    "bian-dang" : {
+        "description"   : "Taiwanese Lunch Boxes",
+        "twitter"       : "url here"
+    },
+    "big-apple-hot-dogs" : {
+        "description"   : "Hot Dogs",
+        "twitter"       : "url here"
+    },
+    "bill-or-beak" : {
+        "description"   : "Chicken or Duck Baps",
+        "twitter"       : "url here"
+    },
+    "bell-brisket" : {
+        "description"   : "Salt Beef Bagels",
+        "twitter"       : "url here"
+    },
+    "block-b" : {
+        "description"   : "Falafel Wraps",
+        "twitter"       : "url here"
+    },
+    "born-raised" : {
+        "description"   : "Wood-Fired Pizzas",
+        "twitter"       : "url here"
+    },
+    "capish" : {
+        "description"   : "Meatball Subs",
+        "twitter"       : "url here"
+    },
+    "cast-iron-kitchen" : {
+        "description"   : "Steak Rolls",
+        "twitter"       : "url here"
+    },
+    "claw" : {
+        "description"   : "Crab Based Food",
+        "twitter"       : "url here"
+    },
+    "club-mexicana" : {
+        "description"   : "Jackfruit Tacos",
+        "twitter"       : "url here"
+    },
+    "crabbieshack" : {
+        "description"   : "Crab Burgers",
+        "twitter"       : "url here"
+    },
+    "chef-de-poutine" : {
+        "description"   : "Poutine",
+        "twitter"       : "url here"
+    },
+    "decatur" : {
+        "description"   : "New Oreleans Desserts",
+        "twitter"       : "url here"
+    },
+    "donostia-social-club" : {
+        "description"   : "Basque Sandwiches & Tapas",
+        "twitter"       : "url here"
+    },
+    "dosa-deli" : {
+        "description"   : "Vegetarian Indian Street Food",
+        "twitter"       : "url here"
+    },
+    "engine-hot-dogs" : {
+        "description"   : "Hot Dogs",
+        "twitter"       : "url here"
+    },
+    "fleisch-mob" : {
+        "description"   : "Austrian Street Food",
+        "twitter"       : "url here"
+    },
+    "fundi-pizza" : {
+        "description"   : "Wood Fired Pizzas",
+        "twitter"       : "url here"
+    },
+    "kimchinary" : {
+        "description"   : "Korean Burritos",
+        "twitter"       : "url here"
+    },
+    "kooky-bakes" : {
+        "description"   : "Cakes",
+        "twitter"       : "url here"
+    },
+    "kothu-kothu" : {
+        "description"   : "Sri Lankan Kothu",
+        "twitter"       : "url here"
+    },
+    "hank-s" : {
+        "description"   : "Po-Boys",
+        "twitter"       : "url here"
+    },
+    "hanoi-kitchen" : {
+        "description"   : "Vietnamese Noodles",
+        "twitter"       : "url here"
+    },
+    "jaffrey" : {
+        "description"   : "Vegetarian Indian Food",
+        "twitter"       : "url here"
+    },
+    "jamon-jamon" : {
+        "description"   : "Paella",
+        "twitter"       : "url here"
+    },
+    "le-swine" : {
+        "description"   : "Bacon Butties",
+        "twitter"       : "url here"
+    },
+    "london-laksa-co" : {
+        "description"   : "Laksa Noodle Soup",
+        "twitter"       : "url here"
+    },
+    "luardos" : {
+        "description"   : "Burritos",
+        "twitter"       : "url here"
+    },
+    "good-proper-tea" : {
+        "description"   : "Tea",
+        "twitter"       : "url here"
+    },
+    "mama-wang-s" : {
+        "description"   : "Hand-pulled Noodles",
+        "twitter"       : "url here"
+    },
+    "mike-ollie" : {
+        "description"   : "Flatbread Wraps",
+        "twitter"       : "url here"
+    },
+    "miss-p-s-barbecue" : {
+        "description"   : "Pulled Pork & Beef Brisket",
+        "twitter"       : "url here"
+    },
+    "motoyogo" : {
+        "description"   : "Frozen Yogurt",
+        "twitter"       : "url here"
+    },
+    "mother-flipper" : {
+        "description"   : "Burgers",
+        "twitter"       : "url here"
+    },
+    "my-pie" : {
+        "description"   : "Pie and Mash",
+        "twitter"       : "url here"
+    },
+    "noble-espresso" : {
+        "description"   : "Coffee",
+        "twitter"       : "url here"
+    },
+    "oli-baba-s" : {
+        "description"   : "Hummus",
+        "twitter"       : "url here"
+    },
+    "rainbo" : {
+        "description"   : "Gyoza Dumplings",
+        "twitter"       : "url here"
+    },
+    "r-la-wala" : {
+        "description"   : "Naan Wraps",
+        "twitter"       : "url here"
+    },
+    "the-beefsteaks" : {
+        "description"   : "Steak & Chips",
+        "twitter"       : "url here"
+    },
+    "the-bowler" : {
+        "description"   : "Meatballs",
+        "twitter"       : "url here"
+    },
+    "the-grilling-greek" : {
+        "description"   : "Greek Wraps & Sides",
+        "twitter"       : "url here"
+    },
+    "the-roadery" : {
+        "description"   : "Best of British",
+        "twitter"       : "url here"
+    },
+    "tongue-n-cheek" : {
+        "description"   : "Underrated Cuts",
+        "twitter"       : "url here"
+    },
+    "saltwood-fish-bar" : {
+        "description"   : "Fish and Chips",
+        "twitter"       : "url here"
+    },
+    "speck-mobile" : {
+        "description"   : "Austrian Food",
+        "twitter"       : "url here"
+    },
+    "suzette" : {
+        "description"   : "Galettes",
+        "twitter"       : "url here"
+    },
+    "sorbitium-ices" : {
+        "description"   : "Ice Cream",
+        "twitter"       : "url here"
+    },
+    "spit-roast" : {
+        "description"   : "Buttermilk Chicken",
+        "twitter"       : "url here"
+    },
+    "stakehaus" : {
+        "description"   : "Steak and Chips",
+        "twitter"       : "url here"
+    },
+    "vinn-goute" : {
+        "description"   : "Seychellois Wraps",
+        "twitter"       : "url here"
+    },
+    "wild-game-co" : {
+        "description"   : "Gamey Meat",
+        "twitter"       : "url here"
+    },
+    "well-kneaded" : {
+        "description"   : "Firebread Pizza",
+        "twitter"       : "url here"
+    },
+    "what-the-dickens" : {
+        "description"   : "Traditional British Food",
+        "twitter"       : "url here"
+    },
+    "yolk" : {
+        "description"   : "Egg Based Food",
+        "twitter"       : "url here"
+    },
+    "yu-kyu" : {
+        "description"   : "Katsu",
+        "twitter"       : "url here"
+    },
+    "yum-bun" : {
+        "description"   : "Steamed Buns",
+        "twitter"       : "url here"
+    },
+    "yum-jungle" : {
+        "description"   : "Spicy Asian Food",
+        "twitter"       : "url here"
+    }
 }
