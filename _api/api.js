@@ -91,7 +91,7 @@ sources["markets"].forEach(function(source) {
                 if (descriptions[handle] != void(0)) {
                     trader["description"] = descriptions[handle];
                 } else {
-                    trader["description"] = "";
+                    trader["description"] = "InKerbator";
                 }
                 trader["href"] = $(this).find("h4 a").attr("href");
                 trader["image"] = $(this).find("a > img").attr("src");
