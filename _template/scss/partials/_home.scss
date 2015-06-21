@@ -72,50 +72,50 @@
 .van {
     position: absolute;
     bottom: -100px;
-    animation: drive 40s ease-in-out infinite;
+    animation: drive 60s ease-in-out infinite;
 
     &:nth-of-type(1) {
-        animation-delay: -2s;
+        animation-delay: -5s;
     }
 
     &:nth-of-type(2) {
-        animation-delay: -4s;
+        animation-delay: -19s;
     }
 
     &:nth-of-type(3) {
-        animation-delay: -7s;
+        animation-delay: -29s;
     }
 
     &:nth-of-type(4) {
-        animation-delay: -10s;
+        animation-delay: -43s;
     }
 
     &:nth-of-type(5) {
-        animation-delay: -14s;
+        animation-delay: -46s;
     }
 
     &:nth-of-type(6) {
-        animation-delay: -20s;
+        animation-delay: -54s;
     }
 
     &:nth-of-type(7) {
-        animation-delay: -24s;
+        animation-delay: -3s;
     }
 
     &:nth-of-type(8) {
-        animation-delay: -27s;
+        animation-delay: -39s;
     }
 
     &:nth-of-type(9) {
-        animation-delay: -31s;
+        animation-delay: -26s;
     }
 
     &:nth-of-type(10) {
-        animation-delay: -36s;
+        animation-delay: -10s;
     }
 
     &:nth-of-type(11) {
-        animation-delay: -40s;
+        animation-delay: -32s;
     }
 
     .wheel {
