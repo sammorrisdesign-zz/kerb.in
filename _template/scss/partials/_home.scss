@@ -4,7 +4,7 @@
     background-color: $white;
 
     &:before {
-        top: 90%;
+        top: 88%;
     }
 }
 
@@ -14,7 +14,7 @@
 
 .market-list {
     position: relative;
-    z-index: 5;
+    z-index: 10;
 
     .market-list__item {
         padding: 6px 0;
@@ -48,7 +48,7 @@
 
 .home__vans {
     position: absolute;
-    bottom: 5%;
+    bottom: 4%;
     z-index: 5;
     width: 100%;
     overflow: hidden;
