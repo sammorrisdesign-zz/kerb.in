@@ -2,6 +2,15 @@
     position: relative;
     padding: 20px 0 230px;
     background-color: $white;
+
+    &:before {
+        top: 88%;
+    }
+
+    .skyline {
+        background-image: url("assets/home.png");
+        bottom: 12%;
+    }
 }
 
 .home__header {
@@ -10,7 +19,7 @@
 
 .market-list {
     position: relative;
-    z-index: 5;
+    z-index: 10;
 
     .market-list__item {
         padding: 6px 0;
@@ -44,7 +53,8 @@
 
 .home__vans {
     position: absolute;
-    bottom: 0;
+    bottom: 4%;
+    z-index: 5;
     width: 100%;
     overflow: hidden;
     height: 265px;
@@ -79,6 +89,10 @@
     .wheel {
         transform-origin: 50% 50%;
         animation: wheel 1s linear infinite;
+    }
+
+    .menu {
+        display: none;
     }
 }
 

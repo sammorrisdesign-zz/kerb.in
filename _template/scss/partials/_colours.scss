@@ -53,7 +53,7 @@
         }
     
         @if ($has-background) {
-            .menu__skyline {
+            .skyline {
                 background-image: url("assets/#{$has-background}.png");
             }
         }
@@ -73,3 +73,4 @@
 @include menu-colour(spitalfields, $light-spitalfields, $spitalfields, spitalfields);
 @include menu-colour(paddington, $light-paddington, $paddington, paddington);
 @include menu-colour(uclu-monthly-, $light-uclu, $uclu);
+@include menu-colour(kerb-on-the-quay, $light-canary-wharf, $canary-wharf);

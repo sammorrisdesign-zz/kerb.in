@@ -5,24 +5,9 @@
     @include mq(tablet) {
         padding-top: 140px;
     }
-
-    &:before {
-        position: absolute;
-        top: 53%;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: $light-default;
-        content: "";
-        z-index: 2;
-
-        @include mq(tablet) {
-            top: 65%;
-        }
-    }
 }
 
-.menu__skyline {
+.skyline {
     position: absolute;
     top: -50%;
     bottom: 35%;
@@ -35,51 +20,6 @@
     opacity: .1;
     animation: background .2s ease-out;
 }
-
-.menu__clouds {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: .2;
-}
-
-@keyframes clouds {
-    from {
-        background-position-x: -10%;
-    }
-
-    to {
-        background-position: 110%;
-    }
-}
-
-@mixin clouds($number, $cloud, $duration, $delay, $size, $top) {
-    .menu__cloud--#{$number} {
-        background-image: url("assets/cloud_0#{$cloud}.svg");
-        animation-duration: $duration;
-        animation-delay: $delay;
-        height: $size;
-        top: $top;
-    }
-}
-
-.menu__cloud {
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    animation: clouds 3s linear infinite;
-}
-
-@include clouds(1, 1, 160s, -10s, 25px, 20px);
-@include clouds(2, 2, 170s, -160s, 50px, 0);
-@include clouds(3, 3, 200s, -0s, 30px, 0);
-@include clouds(4, 3, 210s, -50s, 45px, 30px);
-@include clouds(5, 2, 250s, -160s, 30px, 0);
-@include clouds(6, 1, 160s, -95s, 30px, 15px);
 
 .menu__date {
     text-align: center;
@@ -176,11 +116,6 @@
     position: relative;
     z-index: 5;
     cursor: pointer;
-    display: none;
-
-    .market--has-dates & {
-        display: block;
-    }
 
     &:not(.is-disabled):hover {
         color: darken($default, 15%);

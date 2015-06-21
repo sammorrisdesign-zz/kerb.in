@@ -15,7 +15,7 @@
     <script type="text/javascript" src="//use.typekit.net/hpa3kru.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body class="market--{{marketHandle}}{{#if hasDates}} market--has-dates{{/if}}">
+<body data-bootstrap="menu" class="market--{{marketHandle}}{{#if hasDates}} market--has-dates{{/if}}">
     <header>
         <div class="container">
             <h1 class="title"><a href="{{url}}">Kerb<span class="title__period">.</span>In</a><br /> {{marketName}}</h1>
@@ -34,7 +34,7 @@
                         {{/markets}}
                     </ul>
                 </div>
-                <div class="toggle toggle--next js-toggle-next">
+                <div class="toggle toggle--next js-toggle-next {{#unless hasDates}} is-disabled {{/unless}}">
                     <span class="toggle__label">Next Day</span>
                     <svg class="toggle__arrow" viewBox="0 0 14.85 24.04"><path d="M12.02 9.19L2.83 0 0 2.83l9.19 9.19L0 21.21l2.83 2.83 9.19-9.19 2.83-2.83z"/></svg></div>
             </div>
@@ -59,15 +59,7 @@
             </ul>
             {{/markets}}
         </div>
-        <ul class="menu__clouds">
-            <li class="menu__cloud menu__cloud--1"></li>
-            <li class="menu__cloud menu__cloud--2"></li>
-            <li class="menu__cloud menu__cloud--3"></li>
-            <li class="menu__cloud menu__cloud--4"></li>
-            <li class="menu__cloud menu__cloud--5"></li>
-            <li class="menu__cloud menu__cloud--6"></li>
-        </ul>
-        <div class="menu__skyline">
+        {{> background}}
     </main>
 
     {{> footer}}

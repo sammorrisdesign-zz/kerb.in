@@ -12,7 +12,6 @@ define([
 
     return {
         init: function() {
-            $wrapper = qwery('.menu__wrapper')[0];
             this.bindEvents();
         },
 
@@ -29,7 +28,7 @@ define([
         },
 
         parallaxBackground: function() {
-            bonzo(qwery('.menu__skyline')[0]).css({
+            bonzo(qwery('.skyline')[0]).css({
                 'background-position-x' : this.positionCalc() + "px"
             });
         }
