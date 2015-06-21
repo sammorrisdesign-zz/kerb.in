@@ -102,7 +102,7 @@
     width: 250px;
 
     @include mq(tablet) {
-        max-width: 340px;
+        width: 340px;
         padding: 52px 20px;
     }
 }
