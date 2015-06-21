@@ -33,11 +33,11 @@
 
 @keyframes drive {
     0% {
-        left: -150%;
+        transform: translateX(-150%) scale(.5);
     }
 
     100% {
-        left: 250%;
+        transform: translateX(250%) scale(.5);
     }
 }
 
@@ -62,16 +62,15 @@
 
 .van {
     position: absolute;
-    bottom: -102px;
-    transform: scale(.5);
-    animation: drive 12s ease-in-out infinite;
+    bottom: -100px;
+    animation: drive 20s ease-in-out infinite;
 
     &:nth-of-type(1) {
-        animation-delay: -10s;
+        animation-delay: -5s;
     }
 
     &:nth-of-type(2) {
-        animation-delay: -14s;
+        animation-delay: -8s;
     }
 
     &:nth-of-type(3) {
