@@ -88,8 +88,9 @@ sources["markets"].forEach(function(source) {
                 // Sort out the data
                 trader["handle"] = handle;
                 trader["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "").replace(" - Seychelles Kitchen", "");
+
                 if (descriptions[handle] != void(0)) {
-                    trader["description"] = descriptions[handle];
+                    trader["description"] = descriptions[handle].description;
                 } else {
                     trader["description"] = "InKerbator";
                 }
