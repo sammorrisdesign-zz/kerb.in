@@ -34,7 +34,7 @@
                         {{/markets}}
                     </ul>
                 </div>
-                <div class="toggle toggle--next js-toggle-next">
+                <div class="toggle toggle--next js-toggle-next {{#unless hasDates}} is-disabled {{/unless}}">
                     <span class="toggle__label">Next Day</span>
                     <svg class="toggle__arrow" viewBox="0 0 14.85 24.04"><path d="M12.02 9.19L2.83 0 0 2.83l9.19 9.19L0 21.21l2.83 2.83 9.19-9.19 2.83-2.83z"/></svg></div>
             </div>
