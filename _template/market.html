@@ -54,11 +54,13 @@
             {{#markets}}
             <ul class="menu__list menu__list--{{@index}}" data-date="{{date}}">
                 {{#traders}}
+                {{#if twitter}}<a class="menu__list__link" href="{{twitter}}">{{/if}}
                 <li class="menu__list__trader menu__list__trader--{{@index}}">
                     <img src="{{illustration}}" class="illustration" />
                     <h2 class="title">{{standName}}</h2>
                     <span class="sub-title">{{description}}</span>
                 </li>
+                {{#if twitter}}</a>{{/if}}
                 {{/traders}}
             </ul>
             {{/markets}}

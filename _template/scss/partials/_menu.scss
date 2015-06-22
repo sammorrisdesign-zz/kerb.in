@@ -95,6 +95,16 @@
     }
 }
 
+.menu__list__link:hover {
+    .title {
+        color: $default;
+    }
+
+    .sub-title {
+        color: $black;
+    }
+}
+
 .menu__closed {
     padding-top: 58px;
     animation-delay: 200ms;

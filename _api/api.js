@@ -91,6 +91,9 @@ sources["markets"].forEach(function(source) {
 
                 if (descriptions[handle] != void(0)) {
                     trader["description"] = descriptions[handle].description;
+                    if (descriptions[handle].twitter != void(0)) {
+                        trader["twitter"] = descriptions[handle].twitter;
+                    }
                 } else {
                     trader["description"] = "InKerbator";
                 }

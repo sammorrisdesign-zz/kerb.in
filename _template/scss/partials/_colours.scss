@@ -11,7 +11,7 @@
                 background-color: $dark;
             }
         }
-    
+
         .title {
             .title__period {
                 color: $dark;
@@ -25,42 +25,48 @@
                 }
             }
         }
-    
+
         .sub-title {
             color: $dark;
         }
-    
+
         .toggle:not(.is-disabled):hover {
             color: darken($dark, 15%);
-    
+
             .toggle__arrow {
                 fill: darken($dark, 15%);
             }
         }
-    
+
         .toggle__arrow {
             fill: $dark;
         }
-    
+
         .menu {
             &:before {
                 background-color: $light;
             }
         }
-    
+
+        .menu__list__link:hover {
+            .title {
+                color: $dark;
+            }
+        }
+
         .menu-date {
             color: $dark;
         }
-    
+
         @if ($has-background) {
             .skyline {
                 background-image: url("assets/#{$has-background}.png");
             }
         }
-    
+
         footer {
             background-color: $dark;
-    
+
             a {
                 color: $light;
             }
