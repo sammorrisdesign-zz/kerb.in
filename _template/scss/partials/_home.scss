@@ -32,6 +32,20 @@
     }
 }
 
+@keyframes driveMobile {
+    0% {
+        transform: translateX(-150%) scale(.5);
+    }
+
+    50% {
+        transform: translateX(250%) scale(.5);
+    }
+
+    100% {
+        transform: translateX(250%) scale(.5);
+    }
+}
+
 @keyframes drive {
     0% {
         transform: translateX(-300%) scale(.5);
@@ -69,6 +83,10 @@
     position: absolute;
     bottom: -100px;
     animation: drive 60s ease-in-out infinite;
+
+    @include mq($until: tablet) {
+        animation-name: driveMobile;
+    }
 
     &:nth-of-type(1) {
         animation-delay: -5s;
