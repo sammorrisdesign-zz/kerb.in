@@ -34,15 +34,11 @@
 
 @keyframes drive {
     0% {
-        transform: translateX(-150%) scale(.5);
-    }
-
-    50% {
-        transform: translateX(250%) scale(.5);
+        transform: translateX(-300%) scale(.5);
     }
 
     100% {
-        transform: translateX(250%) scale(.5);
+        transform: translateX(400%) scale(.5);
     }
 }
 
