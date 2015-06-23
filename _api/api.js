@@ -73,7 +73,7 @@ sources["markets"].forEach(function(source) {
             market["traders"] = [];
             market["date"] = $(this).attr("rel");
             market["timestamp"] = $(this).attr("id").replace("date-", "");
-;
+
             var numOfTraders = $(this).find("ul li").length;
 
             // Loop through each trader
@@ -115,7 +115,7 @@ sources["markets"].forEach(function(source) {
             }
         });
 
-        if (output.markets.length < 2) {
+        if (output.markets.length < 1) {
             output.hasDates = false;
         }
 
