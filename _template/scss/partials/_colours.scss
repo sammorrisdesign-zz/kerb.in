@@ -58,9 +58,11 @@
             color: $dark;
         }
 
-        @if ($has-background) {
-            .skyline {
+        .skyline {
+            @if ($has-background) {
                 background-image: url("assets/#{$has-background}.png");
+            } @else {
+                background-image: url("assets/home.png");
             }
         }
 
@@ -80,3 +82,4 @@
 @include menu-colour(paddington, $light-paddington, $paddington, paddington);
 @include menu-colour(uclu-monthly-, $light-uclu, $uclu);
 @include menu-colour(kerb-on-the-quay, $light-canary-wharf, $canary-wharf, canary-wharf);
+@include menu-colour(camden, $light-spitalfields, $spitalfields);

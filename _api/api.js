@@ -125,6 +125,13 @@ sources["markets"].forEach(function(source) {
             output["isClosed"] = false;
         }
 
+        // if theres no date presume it's 24/7
+        if (output.markets[0].timeStamp == undefined) {
+            output.hasDates = false;
+            output.isClosed = false;
+            output.markets[0].date = today;
+        }
+
         // Create Folder
         if (!fs.existsSync("../" + source["handle"])) {
             fs.mkdir('../' + source["handle"], function (err) {
