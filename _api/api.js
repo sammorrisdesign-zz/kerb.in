@@ -36,7 +36,7 @@ sources["markets"].forEach(function(source) {
         output["lastUpdated"] = new Date();
         output["todaysDate"] = null;
         output["url"] = url;
-        output["marketName"] = $(".col_left h3:first-of-type").text();
+        output["marketName"] = $(".section-header .section-title").text().replace("KERB ", "");
         output["marketHandle"] = source["handle"];
         output["isClosed"] = true;
         output["hasDates"] = true;
@@ -68,16 +68,16 @@ sources["markets"].forEach(function(source) {
         output["todaysDate"] = today;
 
         // Target panel on Kerb website and loop through each day
-        $(".rota_panel > ul > li").each(function(index) {
+        $(".traders-carousel--controls").each(function(index) {
             market = {};
             market["traders"] = [];
-            market["date"] = $(this).attr("rel");
-            market["timestamp"] = $(this).attr("id").replace("date-", "");
+            market["date"] = new Date($(this).find(".rsCaption").text()).getDate();
+            market["timestamp"] = $(this).find(".rsCaption").text();
 
             var numOfTraders = $(this).find("ul li").length;
 
             // Loop through each trader
-            $(this).find("ul li").each(function(subIndex) {
+            $(this).find(".traders-carousel .grid-item").each(function(subIndex) {
                 var handle = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", ""),
                     trader = {};
 
@@ -123,13 +123,6 @@ sources["markets"].forEach(function(source) {
             delete output.markets;
         } else if (output.markets.length > 0 && output.markets[0].date == today) {
             output["isClosed"] = false;
-        }
-
-        // if theres no date presume it's 24/7
-        if (output.markets[0].timeStamp == undefined) {
-            output.hasDates = false;
-            output.isClosed = false;
-            output.markets[0].date = today;
         }
 
         // Create Folder

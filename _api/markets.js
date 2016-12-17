@@ -4,11 +4,11 @@ var cheerio = require('cheerio');
 var fs = require("fs");
 
 // External Sources
-var source = "http://www.kerbfood.com/kings-cross/";
+var source = "http://www.kerbfood.com/markets/";
 
 // Options
 var vans = ["luardos", "hanoi-kitchen", "yu-kyu", "the-grilling-greek", "motoyogo", "baba-g-s", "bbq-lab", "kimchinary", "rainbo", "spit-roast", "well-kneaded"];
-var whiteList = ["kerb-on-the-quay", "gherkin", "kings-cross", "spitalfields", "paddington", "uclu-monthly-", "camden"];
+var whiteList = ["Paddington", "King’s Cross", "Gherkin", "Camden Market", "On The Quay"];
 if (process.env.ENV == "local") {
     var url = "http://localhost:3000";
 } else {
@@ -25,13 +25,13 @@ request({
     output["url"] = url;
 
     // Target panel on Kerb website
-    $("#nav_trader_map ul li").each(function(index) {
+    $(".markets-list .markets-list--link").each(function(index) {
         var market = {};
-        market["name"] = $(this).text();
-        market["handle"] = $(this).find("a").attr("href").replace(/\//g, "");
-        market["uri"] = "http://www.kerbfood.com" + $(this).find("a").attr("href");
-        market["localUrl"] = url + $(this).find("a").attr("href");
-        if (whiteList.indexOf(market["handle"]) > -1) {
+        market["name"] = $(this).find('.bolder').text().replace('KERB ', '');
+        if (whiteList.indexOf(market["name"]) > -1) {
+            market["handle"] = $(this).find("a").attr("href").split('/')[4];
+            market["uri"] = $(this).find("a").attr("href");
+            market["localUrl"] = url + $(this).find("a").attr("href").replace('http://www.kerbfood.com/markets', '');
             output["markets"].push(market);
         }
     });
@@ -48,6 +48,7 @@ request({
                     if (err) {
                         console.log(err);
                     } else {
+                        console.log(output);
                         console.log("Json Written");
                     }
                 });
