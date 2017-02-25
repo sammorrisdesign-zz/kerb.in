@@ -68,17 +68,17 @@ sources["markets"].forEach(function(source) {
         output["todaysDate"] = today;
 
         // Target panel on Kerb website and loop through each day
-        $(".traders-carousel--controls").each(function(index) {
+        $(".isotope-wrap--rows").each(function(index) {
             market = {};
             market["traders"] = [];
-            market["date"] = new Date($(this).find(".rsCaption").text()).getDate();
-            market["timestamp"] = $(this).find(".rsCaption").text();
+            market["timestamp"] = Date.parse($(this).find('.rsCaption').text());
+            market["date"] = $(this).find('.rsCaption').text();
 
             var numOfTraders = $(this).find("ul li").length;
 
             // Loop through each trader
-            $(this).find(".traders-carousel .grid-item").each(function(subIndex) {
-                var handle = $(this).find("h4 a").attr("href").replace("/traders/", "").replace("/", ""),
+            $(this).find(".rsContent .grid-item").each(function(subIndex) {
+                var handle = $(this).find("a").attr("href").replace("http://www.kerbfood.com/traders/", "").replace("/", ""),
                     trader = {};
 
                 if (handle == 'noble-espresso') {
@@ -87,7 +87,7 @@ sources["markets"].forEach(function(source) {
 
                 // Sort out the data
                 trader["handle"] = handle;
-                trader["standName"] = $(this).find("h4 a").text().replace(" (inKERBating)", "").replace(" - Seychelles Kitchen", "");
+                trader["standName"] = $(this).find(".grid-title--inner span").text().replace(" (inKERBating)", "").replace(" - Seychelles Kitchen", "");
 
                 if (descriptions[handle] != void(0)) {
                     trader["description"] = descriptions[handle].description;
