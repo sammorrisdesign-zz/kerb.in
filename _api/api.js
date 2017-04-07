@@ -60,8 +60,7 @@ sources["markets"].forEach(function(source) {
 
         var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        var today = dayNames[output["lastUpdated"].getDay()] + " " +
-                    suffixOf(output["lastUpdated"].getDate()) + " " +
+        var today = output["lastUpdated"].getDate() + " " +
                     monthNames[output["lastUpdated"].getMonth()] + " " +
                     output["lastUpdated"].getFullYear();
 
