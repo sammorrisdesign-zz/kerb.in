@@ -48,7 +48,6 @@ request({
                     if (err) {
                         console.log(err);
                     } else {
-                        console.log(output);
                         console.log("Json Written");
                     }
                 });
