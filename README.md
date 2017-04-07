@@ -23,4 +23,4 @@ To get Grunt, run: `npm install -g grunt-cli`
 
 You'll then need to run `npm install` from both the root folder and the `/api` folder to get the various dependances.
 
-Then use `grunt --env=local` to compile all then watch for changes in sass and all scripts and html related to the individual market pages. To deploy simply run `grunt`, note **without** `--env=local`, on the server.
+Then use `grunt --env=local` to compile all then watch for changes in sass and all scripts and html related to the individual market pages. Remotely simply run `grunt`, note **without** `--env=local`, on the server.
